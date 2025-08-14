@@ -4,7 +4,7 @@
 	--color-primary: #D72638;
 	--color-accent: #2E7D32;
 	--color-dark: #1B1B1B;
-	--color-light: #FAF3E0; /* Crema cálido */
+	--color-light: #FAF3E0;
 	--color-white: #FFFFFF;
 }
 
@@ -20,10 +20,41 @@ p {
 	font-weight: 300;
 	color: var(--color-dark);
 }
+
+/* --- FIX LOGO --- */
 .logo {
-	widht: 50px;
-	height: auto; 
+	width: 160px;
+	height: auto;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
 }
+
+.logo img {
+	height: 56px;
+	width: auto;
+	display: block;
+	max-width: 100%;
+}
+
+header .logo {
+	font-size: 1.2em;
+	line-height: 1;
+}
+
+header .logo span {
+	color: var(--color-primary);
+	font-weight: 700;
+	font-size: 1.6em;
+	line-height: 1;
+}
+
+@media (max-width: 480px) {
+	.logo { width: 140px; }
+	.logo img { height: 44px; }
+}
+
+/* ----- RESTO DEL CSS IGUAL QUE TENÍAS ----- */
 .banner {
 	position: relative;
 	width: 100%;
@@ -88,20 +119,8 @@ header.sticky {
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-header .logo {
-	color: var(--color-white);
-	font-weight: 700;
-	font-size: 2em;
-	text-decoration: none;
-	font-family: 'Playfair Display', serif;
-}
-
 header.sticky .logo {
 	color: var(--color-dark);
-}
-
-header .logo span {
-	color: var(--color-primary);
 }
 
 header .navigation {
@@ -462,6 +481,6 @@ section {
 	.contactForm {
 		padding: 35px 40px;
 		margin-top: 20px;
-		margin-bottom: 30px;
+		margin-bottom: 30px;
 	}
 }
