@@ -36,7 +36,14 @@ p {
 	display: block;
 	max-width: 100%;
 }
-
+header {
+    background-color: rgba(255, 255, 255, 0.2); /* Blanco semitransparente */
+    position: absolute; /* o fixed si querés que siempre esté visible */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 header .logo {
 	font-size: 1.2em;
 	line-height: 1;
