@@ -1,120 +1,130 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boccone Pizzería</title>
-
-  <!-- SEO básico -->
-  <meta name="description" content="Boccone Pizzería: pizzas napolitanas en Oberá. Masa de larga fermentación, ingredientes premium y horno bien caliente.">
-  <link rel="canonical" href="https://boccone.ar/">
-
-  <!-- Open Graph (para compartir) -->
-  <meta property="og:title" content="Boccone Pizzería">
-  <meta property="og:description" content="Pizzas napolitanas en Oberá. Probá la Roquefort, Marinara, Prosciutto y más.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://boccone.ar/">
-  <!-- Cambiá esta imagen cuando tengas tu og image -->
-  <meta property="og:image" content="https://boccone.ar/img/og-boccone.jpg">
-
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Schema.org (básico). Completá dirección/teléfono/horarios si querés. -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Boccone Pizzería",
-    "url": "https://boccone.ar/",
-    "servesCuisine": ["Italian", "Pizza"],
-    "priceRange": "$$",
-    "sameAs": ["https://www.instagram.com/tu_instagram"],
-    "hasMenu": "https://boccone.ar/#menu"
-  }
-  </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boccone Pizzería</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <a href="#banner" class="logo" aria-label="Boccone - ir al inicio">
-      <img src="logo_boccone_alta_calidad.png" alt="Boccone Pizzería">
-    </a>
+	<header>
+		<a href="#banner" class="logo">
+			<img src="logo_boccone_alta_calidad.png" alt="Boccone Pizzería">
+			
+		</a>
+		<div class="menuToggle" onclick="toggleMenu()"></div>
+		<ul class="navigation">
+			<li><a href="#home" onclick="toggleMenu()">Home</a></li>
+			<li><a href="#about" onclick="toggleMenu()">About</a></li>
+			<li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+			<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+		</ul>
+	</header>
 
-    <div class="menuToggle" onclick="toggleMenu()" aria-label="Abrir menú" role="button" tabindex="0"></div>
+	<section class="banner" id="banner">
+		<div class="content">
+			<h2>Napolitana Auténtica</h2>
+			
+			<a href="#menu" class="btn">Nuestro Menu</a>
+		</div>
+	</section>
 
-    <ul class="navigation">
-      <li><a href="#banner" onclick="toggleMenu()">Inicio</a></li>
-      <li><a href="#about" onclick="toggleMenu()">Nosotros</a></li>
-      <li><a href="#menu" onclick="toggleMenu()">Menú</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
-    </ul>
-  </header>
+	<section class="about" id="about">
+		<div class="row">
+			<div class="col50">
+				<h2 class="titleText"><span>S</span>obre Nosotros</h2>
+				<p>
+				En Boccone llevamos la tradición italiana a cada pizza. Utilizamos siempre ingredientes de altísima calidad, seleccionados con cuidado, y elaboramos cada receta con pasión y dedicación. Creemos que el verdadero secreto está en el cariño que ponemos en cada paso, desde la masa hasta el último detalle antes de servirla. Porque más que pizzas, creamos momentos para compartir.
+				</p>
+			</div>
+			<div class="col50">
+				<div class="imgBx">
+					<img src="IMG-20250813-WA0007.jpg" alt="Sobre Boccone">
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section class="banner" id="banner">
-    <div class="content">
-      <h2>Napolitana auténtica</h2>
-      <p>En Boccone elaboramos pizzas al estilo napolitano con ingredientes frescos y fermentación lenta. Vení a disfrutar de una experiencia única.</p>
-      <a href="#menu" class="btn">Nuestro menú</a>
-    </div>
-  </section>
+	<section class="menu" id="menu">
+		<div class="title">
+			<h2 class="titleText"><span>M</span>enu</h2>
+			<p>Descubrí nuestras pizzas la mejor estilo de Nápoles.</p>
+		</div>
+		<div class="content">
+			<div class="box"><div class="imgBx"><img src="IMG-20250813-WA0003.jpg"></div><div class="text"><h3>Margarita</h3></div></div>
+			<div class="box"><div class="imgBx"><img src="img/Roquefort.png"></div><div class="text"><h3>Roquefort</h3></div></div>
+			<div class="box"><div class="imgBx"><img data-random alt=""></div><div class="text"><h3>Prosciutto</h3></div></div>
+			<div class="box"><div class="imgBx"><img data-random alt=""></div><div class="text"><h3>Mozzarella</h3></div></div>
+			<div class="box"><div class="imgBx"><img data-random alt=""></div><div class="text"><h3>Marinara</h3></div></div>
+			<div class="box"><div class="imgBx"><img data-random alt=""></div><div class="text"><h3>Peperoni</h3></div></div>
+		</div>
+		<div class="title"><a href="#" class="btn">View All</a></div>
+	</section>
 
-  <section class="about" id="about">
-    <div class="row">
-      <div class="col50">
-        <h2 class="titleText">Sobre Nosotros</h2>
-        <p>
-          En Boccone llevamos la tradición italiana a cada pizza. Usamos ingredientes de altísima calidad y elaboramos cada receta con pasión. El secreto está en el cariño que ponemos en cada paso, desde la masa hasta el último detalle antes de servirla. Porque más que pizzas, creamos momentos para compartir.
-        </p>
-      </div>
-      <div class="col50">
-        <div class="imgBx">
-          <!-- Ruta corregida con carpeta img/ -->
-          <img src="img/IMG-20250813-WA0007.jpg" alt="Equipo de Boccone preparando pizza napolitana">
-        </div>
-      </div>
-    </div>
-  </section>
+	<section class="contact" id="contact">
+		<div class="title">
+			<h2 class="titleText"><span>C</span>ontact Us</h2>
+			
+		</div>
+		<div class="contactForm">
+			<h3>Send Message</h3>
+			<div class="inputBox"><input type="text" placeholder="Name" required></div>
+			<div class="inputBox"><input type="email" placeholder="Email" required></div>
+			<div class="inputBox"><textarea placeholder="Message line..." required></textarea></div>
+			<div class="inputBox"><input type="submit" value="Send"></div>
+		</div>
+	</section>
 
-  <section class="menu" id="menu">
-    <div class="title">
-      <h2 class="titleText">Menú</h2>
-      <p>Descubrí nuestras pizzas al mejor estilo de Nápoles.</p>
-    </div>
+	<div class="copyrightText">
+		<p>Copyright 2020 <a href="#">Atulcodex</a>. All Rights Reserved.</p>
+	</div>
 
-    <div class="content">
-      <!-- Usá tus mejores fotos. Si aún no tenés, podés dejar data-random para que el script asigne. -->
-      <div class="box">
-        <div class="imgBx"><img src="img/IMG-20250813-WA0003.jpg" alt="Pizza Margarita"></div>
-        <div class="text"><h3>Margarita</h3></div>
-      </div>
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0);
+		});
 
-      <div class="box">
-        <div class="imgBx"><img src="img/Roquefort.png" alt="Pizza de roquefort"></div>
-        <div class="text"><h3>Roquefort</h3></div>
-      </div>
+		function toggleMenu(){
+			const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
 
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Prosciutto (jamón y morrón)"></div>
-        <div class="text"><h3>Prosciutto (jamón y morrón)</h3></div>
-      </div>
+		// Lista de imágenes disponibles
+		const WA_IMAGES = [
+			'./img/IMG-20250813-WA0001.jpg',
+			'./img/IMG-20250813-WA0002.jpg',
+			'./img/IMG-20250813-WA0003.jpg',
+			'./img/IMG-20250813-WA0004.jpg',
+			'./img/IMG-20250813-WA0005.jpg',
+			'./img/IMG-20250813-WA0006.jpg',
+			'./img/IMG-20250813-WA0007.jpg',
+			'./img/IMG-20250813-WA0008.jpg'
+		];
 
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Mozzarella"></div>
-        <div class="text"><h3>Mozzarella</h3></div>
-      </div>
+		function shuffle(array){
+			for (let i = array.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[array[i], array[j]] = [array[j], array[i]];
+			}
+			return array;
+		}
 
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Marinara"></div>
-        <div class="text"><h3>Marinara</h3></div>
-      </div>
+		function assignRandomImages(){
+			let pool = shuffle(WA_IMAGES.slice());
+			document.querySelectorAll('img[data-random]').forEach(img => {
+				if (pool.length === 0) pool = shuffle(WA_IMAGES.slice());
+				img.src = pool.pop();
+				img.loading = 'lazy';
+			});
+		}
 
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Pepperoni"></div>
-        <div class="text"><h3>P
+		assignRandomImages();
+	</script>
+</body>
+</html>
