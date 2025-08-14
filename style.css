@@ -20,7 +20,10 @@ p {
 	font-weight: 300;
 	color: var(--color-dark);
 }
-
+.logo {
+	widht: 50px;
+	height: auto; 
+}
 .banner {
 	position: relative;
 	width: 100%;
