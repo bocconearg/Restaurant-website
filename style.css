@@ -199,6 +199,114 @@ section { padding:100px; background-color:var(--color-light); }
   .contact-list{ grid-template-columns:1fr; }
 }
 
+/* ===== CONTACTO · Estilo italiano retro alegre ===== */
+
+/* Paleta retro */
+:root{
+  --cream: #F7EFE3;
+  --sage:  #6A8F6E;   /* verde salvia */
+  --tomato:#D72638;   /* tu rojo */
+  --ink:   #1B1B1B;
+}
+
+/* Fondo crema + franja tricolor superior */
+.contact{
+  position: relative;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 90px 20px 100px;
+}
+.contact::before{
+  content:"";
+  position: absolute; left:0; top:0; width:100%; height:8px;
+  background: linear-gradient(90deg, #2E7D32 0 33.33%, #FFFFFF 33.33% 66.66%, #D72638 66.66% 100%);
+}
+
+/* Quitamos overlay gris previo si quedó */
+.contact .overlay{ display:none !important; }
+
+/* Card tipo “tarjeta vintage” */
+.contact-card{
+  position: relative; z-index:1;
+  max-width: 980px; margin: 0 auto;
+  background: #FFFFFFE6; /* blanco 90% */
+  border: 1px solid #E7DCCD;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  padding: 28px;
+  color: var(--ink);
+}
+
+/* Título y subtítulo, sin superposiciones */
+.contact .titleText{
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0;
+}
+.contact .titleText span{ color: var(--tomato); }
+.contact-head{ text-align:left; margin-bottom: 18px; }
+.contact-head p{
+  margin-top: 6px;
+  color: #594F43;
+  font-weight: 400;
+}
+
+/* Lista de datos: grid prolijo */
+.contact-list{
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px 22px;
+}
+.contact-list li{
+  display: flex; align-items: center; gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #FAF6F0;                 /* pill suave */
+  border: 1px solid #EDE3D6;
+}
+.contact-list img{
+  width: 20px; height: 20px; flex: 0 0 20px;
+  filter: none;                         /* en card claro no invertimos */
+  opacity: .9;
+}
+.contact-list a, .contact-list span{
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.25;
+  word-break: break-word;
+}
+.contact-list a:hover{ color: var(--tomato); }
+
+/* Botones */
+.contact-actions{
+  display: flex; gap: 12px; flex-wrap: wrap;
+  justify-content: flex-start; margin-top: 18px;
+}
+.contact .btn{
+  background: var(--tomato);
+  border: none;
+}
+.contact .btn.btn-light{
+  background: transparent;
+  border: 1px dashed #CDBFAF;
+  color: var(--ink);
+}
+.contact .btn.btn-light:hover{
+  border-style: solid;
+}
+
+/* Responsive: una columna y más aire */
+@media (max-width: 900px){
+  .contact-list{ grid-template-columns: 1fr; }
+  .contact-card{ padding: 24px; }
+}
+@media (max-width: 480px){
+  .contact{ padding: 70px 16px 80px; }
+  .contact .titleText{ font-size: 1.8em; }
+}
+
 @media screen and (max-width:440px){
   .testimonials .content .box{ margin:10px; padding:20px; }
 }
