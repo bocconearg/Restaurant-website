@@ -49,13 +49,14 @@
     </div>
   </section>
 
+  <!-- Línea tricolor italiana -->
+  <div class="italian-divider">
+    <div class="green"></div>
+    <div class="white"></div>
+    <div class="red"></div>
+  </div>
+
   <!-- Menú -->
- <!-- Línea tricolor italiana -->
-<div class="italian-divider">
-  <div class="green"></div>
-  <div class="white"></div>
-  <div class="red"></div>
-</div>
   <section class="menu" id="menu">
     <div class="title">
       <h2 class="titleText"><span>M</span>enú</h2>
@@ -97,10 +98,8 @@
     <div class="title"><a href="#" class="btn">Ver Todo</a></div>
   </section>
 
-  <!-- Contacto (card “glass” sin formulario) -->
+  <!-- Contacto (con SVG inline, sin overlay) -->
   <section class="contact" id="contact" aria-label="Sección de contacto">
-    <div class="overlay"></div>
-
     <div class="contact-card">
       <header class="contact-head">
         <h2 class="titleText"><span>C</span>ontacto</h2>
@@ -108,30 +107,49 @@
       </header>
 
       <ul class="contact-list">
+        <!-- WhatsApp -->
         <li>
-          <img src="img/whatsapp.png" alt="" aria-hidden="true">
-          <!-- Cambiá el número si hace falta -->
-          <a href="https://wa.me/5493764123456" target="_blank" rel="noopener">+54 9 3755567966</a>
+          <svg class="icon-whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false"
+              style="width:22px;height:22px;flex:0 0 22px;fill:#25D366">
+            <path d="M20.52 3.48a11.77 11.77 0 0 0-16.65 0 11.66 11.66 0 0 0-2.61 12.9L.1 24l7.8-2.07a11.72 11.72 0 0 0 12.62-2.61 11.77 11.77 0 0 0 0-16.65zm-8.74 16.2a9.53 9.53 0 0 1-4.85-1.3l-.35-.2-4.62 1.23 1.24-4.5-.23-.37a9.55 9.55 0 1 1 8.8 5.14zm5.41-7.13c-.29-.15-1.7-.84-1.96-.94s-.46-.15-.65.15-.75.94-.92 1.13-.34.23-.63.08a7.76 7.76 0 0 1-2.28-1.41 8.62 8.62 0 0 1-1.59-1.95c-.17-.29 0-.45.13-.6s.29-.34.43-.51.19-.29.29-.48a.55.55 0 0 0 0-.52c-.08-.15-.65-1.56-.89-2.14s-.47-.49-.65-.5-.37 0-.57 0a1.1 1.1 0 0 0-.8.37A3.34 3.34 0 0 0 8 8.68a5.77 5.77 0 0 0 1.2 3.05 13.19 13.19 0 0 0 5.08 4.66c.71.36 1.27.58 1.7.75a4.08 4.08 0 0 0 1.86.11 3.05 3.05 0 0 0 2-1.44 2.47 2.47 0 0 0 .17-1.44c-.07-.13-.26-.21-.55-.36z"/>
+          </svg>
+          <a href="https://wa.me/5493755567966" target="_blank" rel="noopener">+54 9 3755 567966</a>
         </li>
+
+        <!-- Instagram -->
         <li>
-          <img src="img/location.png" alt="" aria-hidden="true">
-          <a href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">
-            San Luis 234, Oberá, Misiones
-          </a>
+          <svg class="icon-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false"
+              style="width:22px;height:22px;flex:0 0 22px;fill:#E1306C">
+            <path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.07 2 .26 2.47.44.67.25 1.27.6 1.77 1.15.55.5.9 1.1 1.15 1.77.18.47.37 1.27.44 2.47.07 1.21.07 1.61.07 4.8s0 3.59-.07 4.8c-.07 1.2-.26 2-.44 2.47a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.18-1.27.37-2.47.44-1.2.07-1.61.07-4.8.07s-3.6 0-4.8-.07c-1.2-.07-2-.26-2.47-.44a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.18-.47-.37-1.27-.44-2.47C2.2 15.6 2.2 15.2 2.2 12s0-3.59.07-4.8c.07-1.2.26-2 .44-2.47A4.92 4.92 0 0 1 3.86 3a4.92 4.92 0 0 1 1.77-1.15c.47-.18 1.27-.37 2.47-.44C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.54 0-4.78.07-1.05.05-1.62.22-2 .37-.5.19-.85.42-1.22.79a3.11 3.11 0 0 0-.79 1.22c-.15.38-.32.95-.37 2C2.8 8.5 2.8 8.87 2.8 12s0 3.54.07 4.78c.05 1.05.22 1.62.37 2 .19.5.42.85.79 1.22.37.37.72.6 1.22.79.38.15.95.32 2 .37 1.24.07 1.62.07 4.78.07s3.54 0 4.78-.07c1.05-.05 1.62-.22 2-.37.5-.19.85-.42 1.22-.79.37-.37.6-.72.79-1.22.15-.38.32-.95.37-2 .07-1.24.07-1.62.07-4.78s0-3.54-.07-4.78c-.05-1.05-.22-1.62-.37-2a3.11 3.11 0 0 0-.79-1.22A3.11 3.11 0 0 0 18.78 4.4c-.38-.15-.95-.32-2-.37C15.54 4 15.16 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-3.6a1.14 1.14 0 1 1-2.28 0 1.14 1.14 0 0 1 2.28 0z"/>
+          </svg>
+          <a href="https://instagram.com/boccone.ar" target="_blank" rel="noopener">@boccone.ar</a>
         </li>
+
+        <!-- Dirección -->
         <li>
-          <img src="img/instagram.png" alt="" aria-hidden="true">
-          <!-- Cambiá el usuario si hace falta -->
-          <a href="https://instagram.com/boccone" target="_blank" rel="noopener">@boccone.ar</a>
+          <svg class="icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false"
+              style="width:22px;height:22px;flex:0 0 22px;fill:#d32f2f">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 .001-5.001A2.5 2.5 0 0 1 12 11.5z"/>
+          </svg>
+          <span>San Luis 234, Oberá, Misiones</span>
         </li>
+
+        <!-- Horario -->
         <li>
-          <img src="img/clock.png" alt="" aria-hidden="true">
+          <svg class="icon-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false"
+              style="width:22px;height:22px;flex:0 0 22px;fill:#555">
+            <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8Zm.5-13h-1v5l4.3 2.5.5-.9-3.8-2.2Z"/>
+          </svg>
           <span>Mar a Sáb: 19:30–23:00 • Dom: 19:30–23:30</span>
         </li>
       </ul>
 
       <div class="contact-actions">
-        <a class="btn" href="https://wa.me/5493764123456" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://wa.me/5493755567966" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn-light" href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </div>
