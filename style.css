@@ -450,3 +450,46 @@ section { padding:100px; background-color:var(--color-light); }
 
 /* Hover sutil (opcional) */
 .contact-list li:hover { background: #f2eee8; }
+
+/* Centrado de título y subtítulo del contacto */
+.contact-head{
+  text-align: center;
+  margin-bottom: 18px;
+}
+.contact-head .titleText{
+  display: inline-block; /* mantiene el span rojo junto */
+  line-height: 1.15;
+}
+.contact-head p{
+  margin-top: 6px;
+}
+
+/* Iconos nítidos y alineados */
+.contact-list svg{
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+  margin-right: 12px;
+}
+
+/* Colores por tipo de icono */
+.icon--whatsapp { color:#25D366; }
+.icon--instagram{ color:#E1306C; }
+.icon--pin      { color:#d32f2f; }
+.icon--clock    { color:#555; }
+
+/* Pills más “italianas” y centradas verticalmente */
+.contact-list li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #F6EFE6;         /* crema suave */
+  border: 1px solid #E5D9C8;
+}
