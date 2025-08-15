@@ -336,3 +336,29 @@ section { padding:100px; background-color:var(--color-light); }
 .italian-divider::after {
   background: #ce2b37; /* Rojo Italia */
 }
+
+/* === DIVISOR ITALIANO === */
+.italian-divider {
+  width: 100%;
+  height: 12px;
+  display: flex;
+}
+
+.italian-divider::before,
+.italian-divider::after,
+.italian-divider div {
+  content: "";
+  flex: 1;
+}
+
+.italian-divider::before {
+  background: #009246; /* Verde Italia */
+}
+
+.italian-divider div {
+  background: #ffffff; /* Blanco */
+}
+
+.italian-divider::after {
+  background: #ce2b37; /* Rojo Italia */
+}
