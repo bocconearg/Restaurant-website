@@ -1,158 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Boccone Pizzería</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boccone Pizzería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<a href="#banner" class="logo">
-			<img src="logo_boccone_alta_calidad.png" alt="Boccone Pizzería">
-		</a>
-		<div class="menuToggle" onclick="toggleMenu()"></div>
-		<ul class="navigation">
-			<li><a href="#banner" onclick="toggleMenu()">Home</a></li>
-			<li><a href="#about" onclick="toggleMenu()">About</a></li>
-			<li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
-			<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-		</ul>
-	</header>
+  <!-- Header -->
+  <header>
+    <a href="#banner" class="logo">
+      <img src="logo_boccone_alta_calidad.png" alt="Boccone Pizzería">
+    </a>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
+    <ul class="navigation">
+      <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </header>
 
-	<section class="banner" id="banner">
-		<div class="content">
-			<h2>Napolitana Auténtica</h2>
-			<a href="#menu" class="btn">Nuestro Menú</a>
-		</div>
-	</section>
+  <!-- Hero -->
+  <section class="banner" id="banner">
+    <div class="content">
+      <h2>Napolitana Auténtica</h2>
+      <a href="#menu" class="btn">Nuestro Menú</a>
+    </div>
+  </section>
 
-	<section class="about" id="about">
-		<div class="row">
-			<div class="col50">
-				<h2 class="titleText"><span>S</span>obre Nosotros</h2>
-				<p>
-					En Boccone llevamos la tradición italiana a cada pizza. Utilizamos siempre ingredientes de altísima calidad, seleccionados con cuidado, y elaboramos cada receta con pasión y dedicación. Creemos que el verdadero secreto está en el cariño que ponemos en cada paso, desde la masa hasta el último detalle antes de servirla. Porque más que pizzas, creamos momentos para compartir.
-				</p>
-			</div>
-			<div class="col50">
-				<div class="imgBx">
-					<img src="IMG-20250813-WA0007.jpg" alt="Sobre Boccone">
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="row">
+      <div class="col50">
+        <h2 class="titleText"><span>S</span>obre Nosotros</h2>
+        <p>
+          En Boccone llevamos la tradición italiana a cada pizza. Utilizamos siempre ingredientes de altísima calidad, seleccionados con cuidado, y elaboramos cada receta con pasión y dedicación. Creemos que el verdadero secreto está en el cariño que ponemos en cada paso, desde la masa hasta el último detalle antes de servirla. Porque más que pizzas, creamos momentos para compartir.
+        </p>
+      </div>
+      <div class="col50">
+        <div class="imgBx">
+          <img src="IMG-20250813-WA0007.jpg" alt="Sobre Boccone">
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<section class="menu" id="menu">
-		<div class="title">
-			<h2 class="titleText"><span>M</span>enú</h2>
-			<p>Descubrí nuestras pizzas estilo napolitano, hechas con masa de fermentación lenta.</p>
-		</div>
-		<div class="content">
-			<div class="box"><div class="imgBx"><img src="IMG-20250813-WA0003.jpg" alt="Pizza Margarita"></div><div class="text"><h3>Margarita</h3></div></div>
-			<div class="box"><div class="imgBx"><img src="img/Roquefort.png" alt="Pizza Roquefort"></div><div class="text"><h3>Roquefort</h3></div></div>
-			<div class="box"><div class="imgBx"><img data-random alt="Pizza Prosciutto"></div><div class="text"><h3>Prosciutto</h3></div></div>
-			<div class="box"><div class="imgBx"><img data-random alt="Pizza Mozzarella"></div><div class="text"><h3>Mozzarella</h3></div></div>
-			<div class="box"><div class="imgBx"><img data-random alt="Pizza Marinara"></div><div class="text"><h3>Marinara</h3></div></div>
-			<div class="box"><div class="imgBx"><img data-random alt="Pizza Peperoni"></div><div class="text"><h3>Peperoni</h3></div></div>
-		</div>
-		<div class="title"><a href="#" class="btn">Ver Todo</a></div>
-	</section>
+  <!-- Menú -->
+  <section class="menu" id="menu">
+    <div class="title">
+      <h2 class="titleText"><span>M</span>enú</h2>
+      <p>Descubrí nuestras pizzas estilo napolitano, hechas con masa de fermentación lenta.</p>
+    </div>
 
-	<!-- CONTACTO SIN FORMULARIO, CON FONDO DE INGREDIENTES -->
-	<section class="contact" id="contact" aria-label="Sección de contacto">
-		<div class="overlay"></div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx"><img src="IMG-20250813-WA0003.jpg" alt="Pizza Margarita"></div>
+        <div class="text"><h3>Margarita</h3></div>
+      </div>
 
-		<div class="title">
-			<h2 class="titleText"><span>C</span>ontacto</h2>
-			<p>Estamos para ayudarte: escribinos o visitanos</p>
-		</div>
+      <div class="box">
+        <div class="imgBx"><img src="img/Roquefort.png" alt="Pizza Roquefort"></div>
+        <div class="text"><h3>Roquefort</h3></div>
+      </div>
 
-		<div class="contact-info">
-			<!-- WhatsApp -->
-					<div class="info-box">
-				<img src="img/whatsapp.png" alt="" aria-hidden="true">
-				<a href="https://wa.me/5493764123456" target="_blank" rel="noopener">+54 9 3764 123456</a>
-			</div>
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Prosciutto"></div>
+        <div class="text"><h3>Prosciutto</h3></div>
+      </div>
 
-			<!-- Dirección -->
-			<div class="info-box">
-				<img src="img/location.png" alt="" aria-hidden="true">
-				<a href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">
-					San Luis 234, Oberá, Misiones
-				</a>
-			</div>
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Mozzarella"></div>
+        <div class="text"><h3>Mozzarella</h3></div>
+      </div>
 
-			<!-- Instagram -->
-			<div class="info-box">
-				<img src="img/instagram.png" alt="" aria-hidden="true">
-				<a href="https://instagram.com/boccone" target="_blank" rel="noopener">@boccone</a>
-			</div>
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Marinara"></div>
+        <div class="text"><h3>Marinara</h3></div>
+      </div>
 
-			<!-- Horarios (opcional) -->
-			<div class="info-box">
-				<img src="img/clock.png" alt="" aria-hidden="true">
-				<p>Lun a Sáb: 19:00–00:30 • Dom: 19:00–23:30</p>
-			</div>
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Peperoni"></div>
+        <div class="text"><h3>Peperoni</h3></div>
+      </div>
+    </div>
 
-			<!-- Botones de acción -->
-			<div class="contact-cta">
-				<a class="btn" href="https://wa.me/5493764123456" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-				<a class="btn btn-light" href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">Cómo llegar</a>
-			</div>
-		</div>
-	</section>
+    <div class="title"><a href="#" class="btn">Ver Todo</a></div>
+  </section>
 
-	<div class="copyrightText">
-		<p>© 2025 Boccone. Todos los derechos reservados.</p>
-	</div>
+  <!-- Contacto (card “glass” sin formulario) -->
+  <section class="contact" id="contact" aria-label="Sección de contacto">
+    <div class="overlay"></div>
 
-	<script type="text/javascript">
-		window.addEventListener('scroll', function(){
-			const header = document.querySelector('header');
-			header.classList.toggle("sticky", window.scrollY > 0);
-		});
+    <div class="contact-card">
+      <header class="contact-head">
+        <h2 class="titleText"><span>C</span>ontacto</h2>
+        <p>Estamos para ayudarte: escribinos o visitanos</p>
+      </header>
 
-		function toggleMenu(){
-			const menuToggle = document.querySelector('.menuToggle');
-			const navigation = document.querySelector('.navigation');
-			menuToggle.classList.toggle('active');
-			navigation.classList.toggle('active');
-		}
+      <ul class="contact-list">
+        <li>
+          <img src="img/whatsapp.png" alt="" aria-hidden="true">
+          <!-- Cambiá el número si hace falta -->
+          <a href="https://wa.me/5493764123456" target="_blank" rel="noopener">+54 9 3764 123456</a>
+        </li>
+        <li>
+          <img src="img/location.png" alt="" aria-hidden="true">
+          <a href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">
+            San Luis 234, Oberá, Misiones
+          </a>
+        </li>
+        <li>
+          <img src="img/instagram.png" alt="" aria-hidden="true">
+          <!-- Cambiá el usuario si hace falta -->
+          <a href="https://instagram.com/boccone" target="_blank" rel="noopener">@boccone</a>
+        </li>
+        <li>
+          <img src="img/clock.png" alt="" aria-hidden="true">
+          <span>Lun a Sáb: 19:00–00:30 • Dom: 19:00–23:30</span>
+        </li>
+      </ul>
 
-		// Lista de imágenes disponibles
-		const WA_IMAGES = [
-			'./img/IMG-20250813-WA0001.jpg',
-			'./img/IMG-20250813-WA0002.jpg',
-			'./img/IMG-20250813-WA0003.jpg',
-			'./img/IMG-20250813-WA0004.jpg',
-			'./img/IMG-20250813-WA0005.jpg',
-			'./img/IMG-20250813-WA0006.jpg',
-			'./img/IMG-20250813-WA0007.jpg',
-			'./img/IMG-20250813-WA0008.jpg'
-		];
+      <div class="contact-actions">
+        <a class="btn" href="https://wa.me/5493764123456" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-light" href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
 
-		function shuffle(array){
-			for (let i = array.length - 1; i > 0; i++) {
-				const j = Math.floor(Math.random() * (i + 1));
-				[array[i], array[j]] = [array[j], array[i]];
-			}
-			return array;
-		}
+  <!-- Footer -->
+  <div class="copyrightText">
+    <p>© 2025 Boccone. Todos los derechos reservados.</p>
+  </div>
 
-		function assignRandomImages(){
-			let pool = shuffle(WA_IMAGES.slice());
-			document.querySelectorAll('img[data-random]').forEach(img => {
-				if (pool.length === 0) pool = shuffle(WA_IMAGES.slice());
-				img.src = pool.pop();
-				img.loading = 'lazy';
-			});
-		}
+  <!-- Scripts -->
+  <script type="text/javascript">
+    // Header sticky
+    window.addEventListener('scroll', function(){
+      const header = document.querySelector('header');
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
 
-		assignRandomImages();
-	</script>
+    // Toggle menú mobile
+    function toggleMenu(){
+      const menuToggle = document.querySelector('.menuToggle');
+      const navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+
+    // Imágenes aleatorias del menú
+    const WA_IMAGES = [
+      './img/IMG-20250813-WA0001.jpg',
+      './img/IMG-20250813-WA0002.jpg',
+      './img/IMG-20250813-WA0003.jpg',
+      './img/IMG-20250813-WA0004.jpg',
+      './img/IMG-20250813-WA0005.jpg',
+      './img/IMG-20250813-WA0006.jpg',
+      './img/IMG-20250813-WA0007.jpg',
+      './img/IMG-20250813-WA0008.jpg'
+    ];
+
+    function shuffle(array){
+      for (let i = array.length - 1; i > 0; i++) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function assignRandomImages(){
+      let pool = shuffle(WA_IMAGES.slice());
+      document.querySelectorAll('img[data-random]').forEach(img => {
+        if (pool.length === 0) pool = shuffle(WA_IMAGES.slice());
+        img.src = pool.pop();
+        img.loading = 'lazy';
+      });
+    }
+
+    assignRandomImages();
+  </script>
 </body>
 </html>
