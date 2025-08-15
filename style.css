@@ -359,6 +359,65 @@ section { padding:100px; background-color:var(--color-light); }
   background: #ffffff; /* Blanco */
 }
 
+/* === FIX superposición en CONTACTO === */
+
+/* Si quedó un .title viejo dentro de #contact, ocultarlo */
+#contact > .title { display: none !important; }
+
+/* El card del contacto en 3 filas: título, lista y acciones */
+.contact-card{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Título sin traslapes */
+.contact-head{
+  display: block;
+  position: relative;
+  margin: 0 0 6px 0;   /* deja aire sobre la lista */
+  line-height: 1.2;
+}
+
+/* Lista sin márgenes fantasmas */
+.contact-list{
+  margin: 0 !important;
+  position: relative;
+}
+
+/* Cada item con altura mínima estable y sin colapsar */
+.contact-list li{
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+/* Íconos: ancho/alto fijo; si no tenés PNGs, no rompas el layout */
+.contact-list img{
+  width: 22px; height: 22px; flex: 0 0 22px;
+  object-fit: contain;
+}
+
+/* Texto de los items: evitar quiebres raros */
+.contact-list a,
+.contact-list span{
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+/* Botones alineados y con aire extra arriba */
+.contact-actions{
+  margin-top: 4px !important;
+}
+
+/* ===== Estética italiana retro para el fondo del bloque ===== */
+.contact{
+  background: var(--cream, #F7EFE3);
+}
 .italian-divider::after {
   background: #ce2b37; /* Rojo Italia */
 }
