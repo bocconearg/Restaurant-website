@@ -1,294 +1,495 @@
-/* ====== RESET ====== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --color-primary:#D72638;
+  --color-accent:#2E7D32;
+  --color-dark:#1B1B1B;
+  --color-light:#FAF3E0;
+  --color-white:#FFFFFF;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
+  font-family:'Inter',sans-serif;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+}
+p { font-weight:300; color:var(--color-dark); }
+
+/* ---------------- LOGO ---------------- */
+.logo { width:160px; height:auto; display:inline-flex; align-items:center; gap:6px; }
+.logo img { height:100px; width:auto; display:block; max-width:100%; }
+header .logo { font-size:1.2em; line-height:1; }
+header .logo span { font-weight:700; font-size:1.6em; line-height:1; }
+
+@media (max-width:480px){
+  .logo{ width:140px; }
+  .logo img{ height:44px; }
 }
 
-body {
-  background: #faf7f0;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ====== HEADER ====== */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s;
-  z-index: 1000;
-  background: transparent;
-}
-
-header.sticky {
-  background: #fff;
-  padding: 10px 60px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-header .logo img {
-  height: 55px;
-}
-
-/* ====== NAV ====== */
-.navigation {
-  position: relative;
-  display: flex;
-}
-
-.navigation li {
-  list-style: none;
-  margin-left: 30px;
-}
-
-.navigation li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navigation li a:hover {
-  color: #d32f2f;
-}
-
-/* ====== TOGGLE MENU ====== */
-.menuToggle {
-  display: none;
-  width: 40px;
-  height: 40px;
-  background: url('menu.png') no-repeat center;
-  background-size: 30px;
-  cursor: pointer;
-}
-
-.menuToggle.active {
-  background: url('close.png') no-repeat center;
-  background-size: 25px;
-}
-
-@media (max-width: 991px) {
-  header {
-    padding: 10px 20px;
-  }
-
-  .navigation {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: #fff;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-  }
-
-  .navigation.active {
-    left: 0;
-  }
-
-  .navigation li {
-    margin: 20px 0;
-  }
-
-  .menuToggle {
-    display: block;
-  }
-}
-
-/* ====== HERO ====== */
+/* ---------------- BANNER ---------------- */
 .banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('hero.jpg') no-repeat center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position:relative; width:100%; min-height:100vh;
+  display:flex; justify-content:center; align-items:center;
+  background:url(img/IMG-20250813-WA0003.jpg) center/cover no-repeat;
 }
+.banner .content{ max-width:900px; text-align:center; }
+.banner .content h2{ font-family:'Playfair Display',serif; font-size:5em; color:var(--color-white); text-transform:capitalize; }
+.banner .content p{ font-size:1em; color:var(--color-white); }
 
-.banner .content {
-  text-align: center;
-  color: #fff;
-}
-
-.banner h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4em;
-  margin-bottom: 20px;
-}
-
+/* ---------------- BOTONES ---------------- */
 .btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #d32f2f;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
+  font-size:1em; color:var(--color-white); background:var(--color-primary);
+  display:inline-block; padding:10px 30px; margin-top:20px; text-transform:uppercase;
+  text-decoration:none; letter-spacing:2px; transition:.5s;
 }
+.btn:hover{ letter-spacing:6px; }
+.btn.btn-light{ background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.4); }
 
-.btn:hover {
-  background: #b71c1c;
+/* ---------------- HEADER ---------------- */
+header {
+  position:fixed; top:0; left:0; width:100%;
+  padding:15px 40px;
+  z-index:10000; display:flex; justify-content:space-between; align-items:center;
+  transition:.5s; background-color:transparent;
 }
+header.sticky {
+  background-color:rgba(255,255,255,0.2);
+  backdrop-filter:blur(6px);
+  padding:8px 40px;
+  box-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+header .navigation { display:flex; }
+header .navigation li { list-style:none; margin-left:30px; }
+header .navigation li a { text-decoration:none; color:var(--color-white); font-weight:400; }
+header.sticky .navigation li a { color:var(--color-dark); }
+header .navigation li a:hover { color:var(--color-primary); }
 
-.btn-light {
-  background: #fff;
-  color: #333;
-}
+/* ---------------- SECCIONES ---------------- */
+section { padding:100px; background-color:var(--color-light); }
+.title { text-align:center; }
+.titleText { color:var(--color-dark); font-size:2em; font-weight:300; font-family:'Playfair Display',serif; }
+.titleText span { color:var(--color-primary); font-weight:700; font-size:1.5em; }
 
-.btn-light:hover {
-  background: #eee;
-}
+.row { position:relative; width:100%; display:flex; justify-content:space-between; }
+.row .col50 { position:relative; width:48%; }
+.imgBx img{ max-width:100%; width:100%; height:auto; }
 
-/* ====== ABOUT ====== */
-.about {
-  padding: 100px 60px;
-}
-
-.about .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.about .col50 {
-  flex: 1;
-  padding: 20px;
-}
-
-.about .imgBx img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-/* ====== DIVIDER ====== */
-.italian-divider {
-  display: flex;
-  height: 6px;
-}
-
-.italian-divider .green {
-  flex: 1;
-  background: #008000;
-}
-.italian-divider .white {
-  flex: 1;
-  background: #fff;
-}
-.italian-divider .red {
-  flex: 1;
-  background: #d32f2f;
-}
-
-/* ====== MENU ====== */
-.menu {
-  padding: 80px 60px;
-  text-align: center;
-}
-
-.menu .titleText {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-.menu p {
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-.menu .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-}
-
-/* === Minimalista === */
+/* ---------------- MENU GRID ---------------- */
+.menu .content { display:flex; justify-content:center; flex-direction:row-reverse; flex-wrap:wrap; margin-top:40px; }
 .menu .content .box {
-  background: none;
-  border: none;
-  box-shadow: none;
-  text-align: center;
+  width:340px; margin:20px; border:15px solid var(--color-white);
+  box-shadow:0 5px 35px rgba(0,0,0,0.08); background-color:var(--color-light);
 }
+.menu .content .box .imgBx { position:relative; width:100%; height:300px; }
+.menu .content .box .imgBx img { width:100%; height:100%; object-fit:cover; }
+.menu .content .box .text { padding:15px 0 5px; }
+.menu .content .box .text h3 { font-weight:400; color:var(--color-dark); }
 
-.menu .content .box .imgBx {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
+/* ---------------- EXPERT ---------------- */
+.expert .content { display:flex; justify-content:center; flex-wrap:wrap; margin-top:40px; }
+.expert .content .box { width:250px; margin:15px; background-color:var(--color-light); }
+.expert .content .box .imgBx { position:relative; width:100%; height:300px; }
+.expert .content .box .imgBx img { width:100%; height:100%; }
+.expert .content .box .text { padding:15px 0 5px; }
+.expert .content .box .text h3 { font-weight:400; color:var(--color-dark); }
+
+/* ---------------- TESTIMONIOS ---------------- */
+.testimonials { background:url(img/bg2.jpg) center/cover no-repeat; }
+.white .titleText, .white p { color:var(--color-white); }
+.testimonials .content { display:flex; justify-content:center; flex-wrap:wrap; flex-direction:row; margin-top:40px; }
+.testimonials .content .box {
+  width:340px; margin:20px; padding:40px; background:var(--color-white);
+  display:flex; justify-content:center; align-items:center; flex-direction:column;
 }
-
-.menu .content .box .imgBx img {
-  width: 100%;
-  display: block;
-  border-radius: 12px;
+.testimonials .content .box .imgBx img {
+  width:80px; height:80px; margin-bottom:20px; border-radius:50%; overflow:hidden;
 }
+.testimonials .content .box .text p { color:#666; font-style:italic; }
+.testimonials .content .box .text h3 { margin-top:20px; color:var(--color-primary); font-size:1em; font-weight:600; }
 
-.menu .content .box .text {
-  margin-top: 10px;
-}
-
-.menu .content .box .text h3 {
-  font-weight: 600;
-  font-size: 1.1em;
-  color: #333;
-}
-
-/* ====== CONTACT ====== */
+/* ---------------- CONTACTO ---------------- */
 .contact {
-  padding: 80px 60px;
-  display: flex;
-  justify-content: center;
+  position:relative;
+  background:url('img/ingredientes.jpg') center/cover no-repeat;
+  color:#fff; padding:100px 20px;
 }
+.contact .overlay { position:absolute; inset:0; background:rgba(0,0,0,.45); }
+.contact .titleText { color:#fff; }
 
 .contact-card {
-  max-width: 600px;
-  width: 100%;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position:relative; z-index:1;
+  max-width:900px; margin:0 auto;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;
+  padding:28px 28px 24px;
+  color:#fff;
 }
+.contact-head { text-align:center; margin-bottom:12px; }
+.contact-head p { color:rgba(255,255,255,.9); font-weight:400; }
 
 .contact-list {
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
+  list-style:none; margin:18px 0 14px; padding:0;
+  display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;
 }
-
 .contact-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+  display:flex; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:10px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
 }
-
-.contact-list a {
-  text-decoration: none;
-  color: #333;
-}
+.contact-list img { width:22px; height:22px; filter:brightness(0) invert(1); }
+.contact-list a, .contact-list span { color:#fff; text-decoration:none; font-weight:500; }
+.contact-list a:hover { color:var(--color-primary); }
 
 .contact-actions {
-  display: flex;
-  justify-content: center;
+  display:flex; gap:12px; justify-content:center; margin-top:14px; flex-wrap:wrap;
 }
 
-/* ====== FOOTER ====== */
+/* oculta form viejo */
+.contactForm { display:none !important; }
+
+/* ---------------- FOOTER ---------------- */
 .copyrightText {
-  background: #111;
-  color: #fff;
+  padding:8px 40px; border-top:1px solid rgba(0,0,0,.1);
+  text-align:center; background-color:var(--color-light);
+}
+.copyrightText p { color:#333; }
+.copyrightText a { color:var(--color-primary); font-weight:500; text-decoration:none; }
+
+/* ---------------- RESPONSIVE ---------------- */
+@media screen and (max-width:991px){
+  header, header.sticky{ padding:10px 20px; }
+  header .navigation { display:none; }
+  header .navigation.active {
+    display:flex; position:fixed; inset:0;
+    flex-direction:column; align-items:flex-start; justify-content:flex-start;
+    gap:16px; padding:100px 24px 24px;
+    background:rgba(255,255,255,.95); backdrop-filter:blur(8px);
+    z-index:10001;
+  }
+  header .navigation li{ margin-left:0; }
+  header .navigation li a{ color:var(--color-dark); font-size:1.4em; font-weight:300; }
+
+  .menuToggle {
+    position:relative; width:40px; height:40px;
+    background:url(img/menu.png) center/30px no-repeat; cursor:pointer;
+  }
+  .menuToggle.active { background:url(img/close.png) center/25px no-repeat; }
+  header.sticky .menuToggle { filter:invert(1); }
+
+  section{ padding:20px; }
+  .banner .content h2{ font-size:3em; }
+
+  .row{ flex-direction:column; }
+  .row .col50{ width:100%; }
+  .col50 .imgBx{ margin-top:30px; }
+
+  .menu .content{ margin-top:20px; }
+  .menu .content .box{ margin:10px; }
+  .menu .content .box .imgBx{ height:260px; }
+
+  .titleText{ font-size:1.8em; line-height:1.5em; margin-bottom:15px; }
+
+  .contact{ padding:70px 16px; }
+  .contact .titleText{ font-size:2em; }
+  .contact-list{ grid-template-columns:1fr; }
+}
+
+/* ===== CONTACTO · Estilo italiano retro alegre ===== */
+
+/* Paleta retro */
+:root{
+  --cream: #F7EFE3;
+  --sage:  #6A8F6E;   /* verde salvia */
+  --tomato:#D72638;   /* tu rojo */
+  --ink:   #1B1B1B;
+}
+
+/* Fondo crema + franja tricolor superior */
+.contact{
+  position: relative;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 90px 20px 100px;
+}
+.contact::before{
+  content:"";
+  position: absolute; left:0; top:0; width:100%; height:8px;
+  background: linear-gradient(90deg, #2E7D32 0 33.33%, #FFFFFF 33.33% 66.66%, #D72638 66.66% 100%);
+}
+
+/* Quitamos overlay gris previo si quedó */
+.contact .overlay{ display:none !important; }
+
+/* Card tipo “tarjeta vintage” */
+.contact-card{
+  position: relative; z-index:1;
+  max-width: 980px; margin: 0 auto;
+  background: #FFFFFFE6; /* blanco 90% */
+  border: 1px solid #E7DCCD;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  padding: 28px;
+  color: var(--ink);
+}
+
+/* Título y subtítulo, sin superposiciones */
+.contact .titleText{
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0;
+}
+.contact .titleText span{ color: var(--tomato); }
+.contact-head{ text-align:left; margin-bottom: 18px; }
+.contact-head p{
+  margin-top: 6px;
+  color: #594F43;
+  font-weight: 400;
+}
+
+/* Lista de datos: grid prolijo */
+.contact-list{
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px 22px;
+}
+.contact-list li{
+  display: flex; align-items: center; gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #FAF6F0;                 /* pill suave */
+  border: 1px solid #EDE3D6;
+}
+.contact-list img{
+  width: 20px; height: 20px; flex: 0 0 20px;
+  filter: none;                         /* en card claro no invertimos */
+  opacity: .9;
+}
+.contact-list a, .contact-list span{
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.25;
+  word-break: break-word;
+}
+.contact-list a:hover{ color: var(--tomato); }
+
+/* Botones */
+.contact-actions{
+  display: flex; gap: 12px; flex-wrap: wrap;
+  justify-content: flex-start; margin-top: 18px;
+}
+.contact .btn{
+  background: var(--tomato);
+  border: none;
+}
+.contact .btn.btn-light{
+  background: transparent;
+  border: 1px dashed #CDBFAF;
+  color: var(--ink);
+}
+.contact .btn.btn-light:hover{
+  border-style: solid;
+}
+
+/* Responsive: una columna y más aire */
+@media (max-width: 900px){
+  .contact-list{ grid-template-columns: 1fr; }
+  .contact-card{ padding: 24px; }
+}
+@media (max-width: 480px){
+  .contact{ padding: 70px 16px 80px; }
+  .contact .titleText{ font-size: 1.8em; }
+}
+
+@media screen and (max-width:440px){
+  .testimonials .content .box{ margin:10px; padding:20px; }
+}
+
+/* === DIVISOR ITALIANO === */
+.italian-divider {
+  width: 100%;
+  height: 12px;
+  display: flex;
+}
+
+.italian-divider::before,
+.italian-divider::after,
+.italian-divider div {
+  content: "";
+  flex: 1;
+}
+
+.italian-divider::before {
+  background: #009246; /* Verde Italia */
+}
+
+.italian-divider div {
+  background: #ffffff; /* Blanco */
+}
+
+.italian-divider::after {
+  background: #ce2b37; /* Rojo Italia */
+}
+
+/* === DIVISOR ITALIANO === */
+.italian-divider {
+  width: 100%;
+  height: 12px;
+  display: flex;
+}
+
+.italian-divider::before,
+.italian-divider::after,
+.italian-divider div {
+  content: "";
+  flex: 1;
+}
+
+.italian-divider::before {
+  background: #009246; /* Verde Italia */
+}
+
+.italian-divider div {
+  background: #ffffff; /* Blanco */
+}
+
+/* === FIX superposición en CONTACTO === */
+
+/* Si quedó un .title viejo dentro de #contact, ocultarlo */
+#contact > .title { display: none !important; }
+
+/* El card del contacto en 3 filas: título, lista y acciones */
+.contact-card{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Título sin traslapes */
+.contact-head{
+  display: block;
+  position: relative;
+  margin: 0 0 6px 0;   /* deja aire sobre la lista */
+  line-height: 1.2;
+}
+
+/* Lista sin márgenes fantasmas */
+.contact-list{
+  margin: 0 !important;
+  position: relative;
+}
+
+/* Cada item con altura mínima estable y sin colapsar */
+.contact-list li{
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+/* Íconos: ancho/alto fijo; si no tenés PNGs, no rompas el layout */
+.contact-list img{
+  width: 22px; height: 22px; flex: 0 0 22px;
+  object-fit: contain;
+}
+
+/* Texto de los items: evitar quiebres raros */
+.contact-list a,
+.contact-list span{
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+/* Botones alineados y con aire extra arriba */
+.contact-actions{
+  margin-top: 4px !important;
+}
+
+/* ===== Estética italiana retro para el fondo del bloque ===== */
+.contact{
+  background: var(--cream, #F7EFE3);
+}
+.italian-divider::after {
+  background: #ce2b37; /* Rojo Italia */
+}
+
+.icon-whatsapp { fill: #25D366; }   /* Verde WhatsApp */
+.icon-instagram { fill: #E1306C; } /* Rosa Instagram */
+.icon-location { fill: #d32f2f; }  /* Rojo Dirección */
+.icon-clock { fill: #555; }        /* Gris Horarios */
+
+/* ===== ICONOS CONTACTO NÍTIDOS ===== */
+.contact-list svg{
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.contact-icon {
+  stroke: currentColor;     /* hereda el color */
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;  /* evita que el trazo se “engorde” al escalar */
+  shape-rendering: geometricPrecision;/* bordes precisos */
+}
+
+/* Colores por ícono (podés ajustarlos fácil) */
+.icon--whatsapp { color: #25D366; }  /* verde WhatsApp */
+.icon--instagram { color: #E1306C; } /* rosado Instagram */
+.icon--pin { color: #d32f2f; }       /* rojo ubicación */
+.icon--clock { color: #555; }        /* gris horario */
+
+/* Hover sutil (opcional) */
+.contact-list li:hover { background: #f2eee8; }
+
+/* Centrado de título y subtítulo del contacto */
+.contact-head{
   text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+  margin-bottom: 18px;
+}
+.contact-head .titleText{
+  display: inline-block; /* mantiene el span rojo junto */
+  line-height: 1.15;
+}
+.contact-head p{
+  margin-top: 6px;
+}
+
+/* Iconos nítidos y alineados */
+.contact-list svg{
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+  margin-right: 12px;
+}
+
+/* Colores por tipo de icono */
+.icon--whatsapp { color:#25D366; }
+.icon--instagram{ color:#E1306C; }
+.icon--pin      { color:#d32f2f; }
+.icon--clock    { color:#555; }
+
+/* Pills más “italianas” y centradas verticalmente */
+.contact-list li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #F6EFE6;         /* crema suave */
+  border: 1px solid #E5D9C8;
 }
