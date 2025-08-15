@@ -421,3 +421,8 @@ section { padding:100px; background-color:var(--color-light); }
 .italian-divider::after {
   background: #ce2b37; /* Rojo Italia */
 }
+
+.icon-whatsapp { fill: #25D366; }   /* Verde WhatsApp */
+.icon-instagram { fill: #E1306C; } /* Rosa Instagram */
+.icon-location { fill: #d32f2f; }  /* Rojo Dirección */
+.icon-clock { fill: #555; }        /* Gris Horarios */
