@@ -426,3 +426,27 @@ section { padding:100px; background-color:var(--color-light); }
 .icon-instagram { fill: #E1306C; } /* Rosa Instagram */
 .icon-location { fill: #d32f2f; }  /* Rojo Dirección */
 .icon-clock { fill: #555; }        /* Gris Horarios */
+
+/* ===== ICONOS CONTACTO NÍTIDOS ===== */
+.contact-list svg{
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.contact-icon {
+  stroke: currentColor;     /* hereda el color */
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;  /* evita que el trazo se “engorde” al escalar */
+  shape-rendering: geometricPrecision;/* bordes precisos */
+}
+
+/* Colores por ícono (podés ajustarlos fácil) */
+.icon--whatsapp { color: #25D366; }  /* verde WhatsApp */
+.icon--instagram { color: #E1306C; } /* rosado Instagram */
+.icon--pin { color: #d32f2f; }       /* rojo ubicación */
+.icon--clock { color: #555; }        /* gris horario */
+
+/* Hover sutil (opcional) */
+.contact-list li:hover { background: #f2eee8; }
