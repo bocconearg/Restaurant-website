@@ -1,38 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boccone Pizzería</title>
-
-  <!-- Fuentes y CSS principal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- CSS mínimo embebido para iconos nítidos + divisor italiano -->
-  <style>
-    /* ===== ICONOS CONTACTO NÍTIDOS ===== */
-    .contact-list svg{ width:24px; height:24px; display:block; }
-    .contact-icon{
-      stroke: currentColor; fill:none; stroke-width:2;
-      vector-effect: non-scaling-stroke; shape-rendering:geometricPrecision;
-    }
-    .icon--whatsapp { color:#25D366; }
-    .icon--instagram{ color:#E1306C; }
-    .icon--pin      { color:#d32f2f; }
-    .icon--clock    { color:#555; }
-
-    /* Hover sutil (opcional) */
-    .contact-list li:hover{ background:#f2eee8; }
-
-    /* ===== DIVISOR ITALIANO ===== */
-    .italian-divider{ width:100%; height:12px; display:flex; }
-    .italian-divider .green{ flex:1; background:#009246; }
-    .italian-divider .white{ flex:1; background:#ffffff; }
-    .italian-divider .red  { flex:1; background:#ce2b37; }
-  </style>
 </head>
 <body>
   <!-- Header -->
@@ -125,6 +100,8 @@
 
   <!-- Contacto -->
   <section class="contact" id="contact" aria-label="Sección de contacto">
+    <div class="overlay"></div>
+
     <div class="contact-card">
       <header class="contact-head">
         <h2 class="titleText"><span>C</span>ontacto</h2>
@@ -132,41 +109,33 @@
       </header>
 
       <ul class="contact-list">
-        <!-- WhatsApp -->
         <li>
-          <svg class="contact-icon icon--whatsapp" viewBox="0 0 24 24" aria-hidden="true">
-            <!-- estilo burbuja + teléfono, outline -->
-            <path d="M21 10a9 9 0 1 1-3.1-6.8"/>
-            <path d="M8 21 6 19l-3 .8L4 17"/>
-            <path d="M16.5 13.5c-.3.5-1.2 1.2-1.7 1.4-.3.1-.7.1-1 .1a6.7 6.7 0 0 1-3-1.2 7.5 7.5 0 0 1-2.3-2.3 6.7 6.7 0 0 1-1.2-3c0-.4 0-.7.2-1 .2-.5.9-1.4 1.4-1.7.2-.1.5-.1.7 0 .3.2 1.1 1.4 1.3 1.8.2.3.2.6 0 .9-.2.3-.6.7-.7.9-.1.2 0 .4.1.6.4.7 1.4 1.8 2.2 2.3.2.1.4.2.6.1.2-.1.6-.5.9-.7.3-.2.6-.2.9 0 .4.2 1.6 1 1.8 1.3.1.2.1.5 0 .7Z"/>
+          <!-- WhatsApp SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;vertical-align:middle;">
+            <path d="M20.5 6.5A9.9 9.9 0 0 0 3.5 17L3 22l5-1.3A9.9 9.9 0 1 0 20.5 6.5Zm-4 8c-.3.6-1.4 1.4-2 1.6-.4.1-.9.2-1.3.1-1.1-.1-2.4-.7-3.7-1.7a10.2 10.2 0 0 1-2.9-3.3c-.5-.9-.8-1.8-.9-2.6-.1-.5.1-1 .3-1.4s.6-.9 1.2-1.4c.3-.3.7-.3 1 .1.3.4 1.1 1.7 1.2 2 .1.3.1.6-.1.9l-.6.8c-.1.2-.1.4 0 .6.3.6 1.2 1.6 2.1 2.2.3.2.6.2.8.1l.9-.7c.3-.2.6-.2.9 0 .4.2 1.9 1.1 2.2 1.3.3.2.3.5.2.7Z"/>
           </svg>
           <a href="https://wa.me/5493755567966" target="_blank" rel="noopener">+54 9 3755 567966</a>
         </li>
-
-        <!-- Instagram -->
         <li>
-          <svg class="contact-icon icon--instagram" viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="3.5"/>
-            <circle cx="17.5" cy="6.5" r="1.2"/>
+          <!-- Ubicación SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;vertical-align:middle;">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
           </svg>
-          <a href="https://instagram.com/boccone.ar" target="_blank" rel="noopener">@boccone.ar</a>
+          <a href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">
+            San Luis 234, Oberá, Misiones
+          </a>
         </li>
-
-        <!-- Dirección -->
         <li>
-          <svg class="contact-icon icon--pin" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 22s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/>
-            <circle cx="12" cy="10" r="2.5"/>
+          <!-- Instagram SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;vertical-align:middle;">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7Zm10 2c1.6 0 3 1.4 3 3v10c0 1.6-1.4 3-3 3H7c-1.6 0-3-1.4-3-3V7c0-1.6 1.4-3 3-3h10Zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm4.8-.9a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2Z"/>
           </svg>
-          <span>San Luis 234, Oberá, Misiones</span>
+          <a href="https://instagram.com/boccone" target="_blank" rel="noopener">@boccone.ar</a>
         </li>
-
-        <!-- Horario -->
         <li>
-          <svg class="contact-icon icon--clock" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 7v5l4 2"/>
+          <!-- Reloj SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;vertical-align:middle;">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.5-12h-1v5l4.2 2.5.5-.9-3.7-2.1V8Z"/>
           </svg>
           <span>Mar a Sáb: 19:30–23:00 • Dom: 19:30–23:30</span>
         </li>
@@ -185,7 +154,7 @@
   </div>
 
   <!-- Scripts -->
-  <script>
+  <script type="text/javascript">
     // Header sticky
     window.addEventListener('scroll', function(){
       const header = document.querySelector('header');
@@ -211,6 +180,7 @@
       './img/IMG-20250813-WA0007.jpg',
       './img/IMG-20250813-WA0008.jpg'
     ];
+
     function shuffle(array){
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -218,6 +188,7 @@
       }
       return array;
     }
+
     function assignRandomImages(){
       let pool = shuffle(WA_IMAGES.slice());
       document.querySelectorAll('img[data-random]').forEach(img => {
@@ -226,6 +197,7 @@
         img.loading = 'lazy';
       });
     }
+
     assignRandomImages();
   </script>
 </body>
