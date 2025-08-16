@@ -448,6 +448,25 @@ copyrightText {
 
 /* Asegura que ningún filtro lo oscurezca */
 header.sticky .menuToggle{ filter:none !important; }
+/* Parallax suave para imágenes del menú */
+.menu .content .box .imgBx {
+  overflow: hidden;                 /* por si la imagen se mueve */
+}
+
+.menu .content .box .imgBx img {
+  transform: translateY(var(--shift, 0)) scale(1.06);  /* leve zoom para que no se “vea el borde” al mover */
+  transition: transform 0.08s linear;
+  will-change: transform;           /* hint de performance */
+}
+
+/* Si el usuario prefiere menos movimiento, lo desactivamos */
+@media (prefers-reduced-motion: reduce) {
+  .menu .content .box .imgBx img {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 
 
 
