@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&family=Italianno&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
   <!-- CSS (forzamos recarga con ?v=11) -->
   <link rel="stylesheet" href="style.css?v=11">
@@ -75,8 +76,9 @@
           <img src="IMG-20250813-WA0003.jpg" alt="Pizza Margarita">
         </div>
         <div class="text">
-          <h3 class="item-name-italian" data-subtitle="La reina de Nápoles: tomate, mozzarella y albahaca fresca.">
+          <h3 class="item-name-italian">
             Margarita
+            <span class="subtitle">La reina de Nápoles: tomate, mozzarella y albahaca fresca.</span>
           </h3>
         </div>
       </div>
@@ -86,8 +88,9 @@
           <img src="img/Roquefort.png" alt="Pizza Roquefort">
         </div>
         <div class="text">
-          <h3 class="item-name-italian" data-subtitle="Un toque francés en corazón italiano, intenso y cremoso.">
+          <h3 class="item-name-italian">
             Roquefort
+            <span class="subtitle">Un toque francés en corazón italiano, intenso y cremoso.</span>
           </h3>
         </div>
       </div>
@@ -97,8 +100,9 @@
           <img src="IMG-20250813-WA0007.jpg" alt="Pizza Prosciutto">
         </div>
         <div class="text">
-          <h3 class="item-name-italian" data-subtitle="Jamón cocido y morrones asados, sabor casero y abundante.">
+          <h3 class="item-name-italian">
             Prosciutto
+            <span class="subtitle">Jamón cocido y morrones asados, sabor casero y abundante.</span>
           </h3>
         </div>
       </div>
@@ -108,8 +112,9 @@
           <img src="IMG-20250813-WA0001.jpg" alt="Pizza Mozzarella">
         </div>
         <div class="text">
-          <h3 class="item-name-italian" data-subtitle="Simple y auténtica: mozzarella fundida en su máxima expresión.">
+          <h3 class="item-name-italian">
             Mozzarella
+            <span class="subtitle">Simple y auténtica: mozzarella fundida en su máxima expresión.</span>
           </h3>
         </div>
       </div>
@@ -119,8 +124,9 @@
           <img src="IMG-20250813-WA0005.jpg" alt="Pizza Marinara">
         </div>
         <div class="text">
-          <h3 class="item-name-italian" data-subtitle="La más antigua: tomate, ajo y orégano, sin distracciones.">
+          <h3 class="item-name-italian">
             Marinara
+            <span class="subtitle">La más antigua: tomate, ajo y orégano, sin distracciones.</span>
           </h3>
         </div>
       </div>
@@ -130,8 +136,9 @@
           <img src="IMG-20250813-WA0008.jpg" alt="Pizza Peperoni">
         </div>
         <div class="text">
-          <h3 class="item-name-italian" data-subtitle="Picante, jugosa y tentadora: un clásico que nunca falla.">
+          <h3 class="item-name-italian">
             Peperoni
+            <span class="subtitle">Picante, jugosa y tentadora: un clásico que nunca falla.</span>
           </h3>
         </div>
       </div>
@@ -142,7 +149,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contacto -->
   <section id="contact" class="contact">
     <div class="contact-card">
       <div class="contact-head">
@@ -152,16 +159,20 @@
 
       <ul class="contact-list">
         <li>
-          <a href="https://wa.me/5493755567966" target="_blank">📞 +54 9 3755 567966</a>
+          <svg class="contact-icon icon--phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.2 11.7 11.7 0 003.7.6 1 1 0 011 1v3.7a1 1 0 01-1 1A17.6 17.6 0 014 6.6a1 1 0 011-1h3.7a1 1 0 011 1 11.7 11.7 0 00.6 3.7 1 1 0 01-.2 1l-2.5 2.5z" stroke="currentColor"/></svg>
+          <a href="https://wa.me/5493755567966" target="_blank">+54 9 3755 567966</a>
         </li>
         <li>
-          <a href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank">📍 San Luis 234, Oberá, Misiones</a>
+          <svg class="contact-icon icon--pin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 1112 0c0 4.7-6 10-6 10z" stroke="currentColor"/></svg>
+          <span>San Luis 234, Oberá, Misiones</span>
         </li>
         <li>
-          <a href="https://instagram.com/boccone.arg" target="_blank">📷 @boccone.arg</a>
+          <svg class="contact-icon icon--instagram" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor"/><circle cx="12" cy="12" r="3.5" stroke="currentColor"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+          <a href="https://instagram.com/boccone.arg" target="_blank">@boccone.arg</a>
         </li>
         <li>
-          ⏰ Mar a Sáb: 19:30–23:00 • Dom: 19:30–23:30
+          <svg class="contact-icon icon--clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor"/><path d="M12 7v5l3 2" stroke="currentColor"/></svg>
+          <span>Mar a Sáb: 19:30–23:00 • Dom: 19:30–23:30</span>
         </li>
       </ul>
 
@@ -191,18 +202,6 @@
       navigation.classList.toggle('active');
     }
 
-    // Subtítulos dinámicos
-    document.querySelectorAll(".item-name-italian").forEach(item => {
-      const subtitle = item.getAttribute("data-subtitle");
-      if(subtitle){
-        const span = document.createElement("span");
-        span.className = "subtitle";
-        span.textContent = subtitle;
-        item.appendChild(span);
-      }
-    });
-
-    // Imágenes random
     const WA_IMAGES = [
       './img/IMG-20250813-WA0001.jpg',
       './img/IMG-20250813-WA0002.jpg',
