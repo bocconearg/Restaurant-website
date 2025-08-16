@@ -439,3 +439,27 @@ section { padding:100px; background-color:var(--color-light); }
 
 /* Hover sutil (opcional) */
 .contact-list li:hover { background: #f2eee8
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Italianno&display=swap');
+
+/* Nombre de pizza */
+#menu .item-name-italian {
+  font-family:'Italianno', cursive;
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-dark, #1B1B1B);
+  margin: 10px 0 4px;
+}
+
+/* Subtítulo debajo del nombre */
+#menu .item-name-italian[data-subtitle]::after {
+  content: attr(data-subtitle);
+  display: block;
+  font-family:'Playfair Display', serif;
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #5c5c5c;
+  line-height: 1.35;
+  text-align: center;
+  margin-top: 3px;
+}
