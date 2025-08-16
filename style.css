@@ -684,6 +684,22 @@ header.sticky .menuToggle{ filter:none !important; }
   letter-spacing:.5px;
 }
 #menu .title .btn:hover{ background:#b71c2b; }
+/* Centrar título y párrafo de SOBRE NOSOTROS */
+#about .col50{
+  text-align: center;
+}
+
+#about .titleText{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about p{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
