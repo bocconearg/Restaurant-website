@@ -1,19 +1,17 @@
 /* =================== FUENTES =================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&family=Italianno&display=swap');
 
 /* =================== VARIABLES =================== */
 :root {
-  --color-primary:#D72638;
-  --color-accent:#2E7D32;
-  --color-dark:#1B1B1B;
-  --color-light:#FAF3E0;
+  --color-primary:#D72638;     /* Rojo napolitano */
+  --color-accent:#2E7D32;      /* Verde */
+  --color-dark:#111111;        /* Fondo principal premium */
+  --color-dark-alt:#1b1b1b;    /* Alternativo */
+  --color-light:#1f1f1f;       /* Secciones intermedias */
   --color-white:#FFFFFF;
 
-  /* Paleta retro contacto */
-  --cream: #F7EFE3;
-  --sage:  #6A8F6E;
-  --tomato:#D72638;
-  --ink:   #1B1B1B;
+  --color-text:#f2f2f2;        /* Texto principal */
+  --color-subtext:#bdbdbd;     /* Texto secundario */
 }
 
 /* =================== BASE =================== */
@@ -24,7 +22,7 @@
   padding:0;
   scroll-behavior:smooth;
 }
-p { font-weight:300; color:var(--color-dark); }
+p { font-weight:300; color:var(--color-text) !important; }
 
 /* =================== LOGO =================== */
 .logo { width:160px; height:auto; display:inline-flex; align-items:center; gap:6px; }
@@ -44,17 +42,17 @@ header .logo span { font-weight:700; font-size:1.6em; line-height:1; }
   background:url(img/IMG-20250813-WA0003.jpg) center/cover no-repeat;
 }
 .banner .content{ max-width:900px; text-align:center; }
-.banner .content h2{ font-family:'Playfair Display',serif; font-size:5em; color:var(--color-white); text-transform:capitalize; }
-.banner .content p{ font-size:1em; color:var(--color-white); }
+.banner .content h2{ font-family:'Playfair Display',serif; font-size:5em; color:var(--color-white) !important; text-transform:capitalize; }
+.banner .content p{ font-size:1em; color:var(--color-subtext) !important; }
 
 /* =================== BOTONES =================== */
 .btn {
-  font-size:1em; color:var(--color-white); background:var(--color-primary);
+  font-size:1em; color:var(--color-white) !important; background:var(--color-primary) !important;
   display:inline-block; padding:10px 30px; margin-top:20px; text-transform:uppercase;
   text-decoration:none; letter-spacing:2px; transition:.5s;
 }
 .btn:hover{ letter-spacing:6px; }
-.btn.btn-light{ background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.4); }
+.btn.btn-light{ background:rgba(255,255,255,.05) !important; border:1px solid rgba(255,255,255,.2) !important; }
 
 /* =================== HEADER =================== */
 header {
@@ -64,26 +62,26 @@ header {
   transition:.5s; background-color:transparent;
 }
 header.sticky {
-  background-color:rgba(255,255,255,0.2);
+  background-color:rgba(17,17,17,0.9) !important;
   backdrop-filter:blur(6px);
   padding:8px 40px;
   box-shadow:0 5px 20px rgba(0,0,0,.5);
 }
 header .navigation { display:flex; }
 header .navigation li { list-style:none; margin-left:30px; }
-header .navigation li a { text-decoration:none; color:var(--color-white); font-weight:400; }
-header.sticky .navigation li a { color:var(--color-dark); }
-header .navigation li a:hover { color:var(--color-primary); }
+header .navigation li a { text-decoration:none; color:var(--color-white) !important; font-weight:400; }
+header.sticky .navigation li a { color:var(--color-text) !important; }
+header .navigation li a:hover { color:var(--color-primary) !important; }
 
 /* =================== SECCIONES =================== */
-section { padding:100px; background-color:var(--color-light); }
+section { padding:100px; background-color:var(--color-dark) !important; }
 .title { text-align:center; }
-.titleText { color:var(--color-dark); font-size:2em; font-weight:300; font-family:'Playfair Display',serif; }
-.titleText span { color:var(--color-primary); font-weight:700; font-size:1.5em; }
+.titleText { color:var(--color-white) !important; font-size:2em; font-weight:300; font-family:'Playfair Display',serif; }
+.titleText span { color:var(--color-primary) !important; font-weight:700; font-size:1.5em; }
 
 .row { position:relative; width:100%; display:flex; justify-content:space-between; }
 .row .col50 { position:relative; width:48%; }
-.imgBx img{ max-width:100%; width:100%; height:auto; }
+.imgBx img{ max-width:100%; width:100%; height:auto; border-radius:12px; }
 
 /* =================== MENÚ GRID =================== */
 .menu .content { 
@@ -92,8 +90,8 @@ section { padding:100px; background-color:var(--color-light); }
 .menu .content .box {
   width:340px; 
   margin:20px; 
-  box-shadow:0 5px 35px rgba(0,0,0,0.08); 
-  background-color:var(--color-light);
+  box-shadow:0 5px 35px rgba(0,0,0,0.4); 
+  background-color:var(--color-dark-alt) !important;
   border-radius:16px;
   overflow:hidden;
 }
@@ -105,29 +103,30 @@ section { padding:100px; background-color:var(--color-light); }
   display:block;
 }
 .menu .content .box .text { padding:15px 0 5px; }
-.menu .content .box .text h3 { font-weight:400; color:var(--color-dark); }
+.menu .content .box .text h3 { font-weight:400; color:var(--color-text) !important; }
 
 /* =================== EXPERT =================== */
 .expert .content { display:flex; justify-content:center; flex-wrap:wrap; margin-top:40px; }
-.expert .content .box { width:250px; margin:15px; background-color:var(--color-light); }
+.expert .content .box { width:250px; margin:15px; background-color:var(--color-dark-alt) !important; border-radius:12px; }
 .expert .content .box .imgBx { position:relative; width:100%; height:300px; }
-.expert .content .box .imgBx img { width:100%; height:100%; }
+.expert .content .box .imgBx img { width:100%; height:100%; border-radius:12px 12px 0 0; }
 .expert .content .box .text { padding:15px 0 5px; }
-.expert .content .box .text h3 { font-weight:400; color:var(--color-dark); }
+.expert .content .box .text h3 { font-weight:400; color:var(--color-text) !important; }
 
 /* =================== TESTIMONIOS =================== */
-.testimonials { background:url(img/bg2.jpg) center/cover no-repeat; }
-.white .titleText, .white p { color:var(--color-white); }
+.testimonials { background:var(--color-dark-alt) !important; }
+.white .titleText, .white p { color:var(--color-text) !important; }
 .testimonials .content { display:flex; justify-content:center; flex-wrap:wrap; flex-direction:row; margin-top:40px; }
 .testimonials .content .box {
-  width:340px; margin:20px; padding:40px; background:var(--color-white);
+  width:340px; margin:20px; padding:40px; background:var(--color-light) !important;
   display:flex; justify-content:center; align-items:center; flex-direction:column;
+  border-radius:16px;
 }
 .testimonials .content .box .imgBx img {
   width:80px; height:80px; margin-bottom:20px; border-radius:50%; overflow:hidden;
 }
-.testimonials .content .box .text p { color:#666; font-style:italic; }
-.testimonials .content .box .text h3 { margin-top:20px; color:var(--color-primary); font-size:1em; font-weight:600; }
+.testimonials .content .box .text p { color:var(--color-subtext) !important; font-style:italic; }
+.testimonials .content .box .text h3 { margin-top:20px; color:var(--color-primary) !important; font-size:1em; font-weight:600; }
 
 /* =================== DIVISOR ITALIANO =================== */
 .italian-divider { width: 100%; height: 12px; display: flex; }
@@ -138,99 +137,44 @@ section { padding:100px; background-color:var(--color-light); }
 .italian-divider div { background: #ffffff; }     /* Blanco */
 .italian-divider::after { background: #ce2b37; }  /* Rojo Italia */
 
-/* =================== CONTACTO (ESTILO RETRO ITALIANO) =================== */
+/* =================== CONTACTO =================== */
 .contact{
   position: relative;
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--color-dark) !important;
+  color: var(--color-text) !important;
   padding: 90px 20px 100px;
 }
-.contact::before{
-  content:"";
-  position: absolute; left:0; top:0; width:100%; height:8px;
-  background: linear-gradient(90deg, #2E7D32 0 33.33%, #FFFFFF 33.33% 66.66%, #D72638 66.66% 100%);
-}
-
-/* ocultamos overlays viejos si existieran */
-.contact .overlay{ display:none !important; }
-
-/* Card */
 .contact-card{
   position: relative; z-index:1;
   max-width: 980px; margin: 0 auto;
-  background: #FFFFFFE6;
-  border: 1px solid #E7DCCD;
+  background: var(--color-dark-alt) !important;
+  border: 1px solid #2a2a2a;
   border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  box-shadow: 0 10px 26px rgba(0,0,0,.4);
   padding: 28px;
-  color: var(--ink);
-
-  /* grid interno */
+  color: var(--color-text) !important;
   display: grid;
   grid-template-rows: auto auto auto;
   row-gap: 18px;
 }
-
-/* Título/subtítulo */
-.contact .titleText{ color: var(--ink); line-height: 1.15; margin: 0; }
-.contact .titleText span{ color: var(--tomato); }
-.contact-head{ display:block; position:relative; margin:0 0 6px 0; line-height:1.2; }
-.contact-head p{ margin-top:6px; color:#594F43; font-weight:400; }
-
-/* Lista */
-.contact-list{
-  list-style: none; margin: 0 !important; padding: 0;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 14px 22px; position:relative;
-}
+.contact .titleText{ color: var(--color-white) !important; line-height: 1.15; margin: 0; }
+.contact-head p{ margin-top:6px; color:var(--color-subtext) !important; font-weight:400; }
 .contact-list li{
-  display: flex; align-items: center; gap: 10px;
-  min-height: 48px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: #FAF6F0;
-  border: 1px solid #EDE3D6;
+  background: #222 !important;
+  border: 1px solid #333 !important;
 }
-.contact-list li:hover { background: #f2eee8; } /* <- corregido ; y } */
-
-.contact-list img{
-  width: 22px; height: 22px; flex: 0 0 22px;
-  object-fit: contain; opacity:.9; filter:none;
-}
-.contact-list a, .contact-list span{
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.3;
-  word-break: break-word;
-}
-.contact-list a:hover{ color: var(--tomato); }
-
-/* Acciones */
-.contact-actions{ display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start; margin-top:4px !important; }
-.contact .btn{ background: var(--tomato); border:none; }
-.contact .btn.btn-light{
-  background: transparent;
-  border: 1px dashed #CDBFAF;
-  color: var(--ink);
-}
-.contact .btn.btn-light:hover{ border-style: solid; }
-
-/* Íconos SVG nítidos */
-.contact-list svg{ width:24px; height:24px; display:block; }
-.contact-icon { stroke: currentColor; fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; shape-rendering: geometricPrecision; }
-.icon--whatsapp { color:#25D366; }
-.icon--instagram{ color:#E1306C; }
-.icon--pin      { color:#d32f2f; }
-.icon--clock    { color:#555; }
+.contact-list li:hover { background: #2a2a2a !important; }
+.contact-list a, .contact-list span{ color: var(--color-text) !important; }
+.contact-list a:hover{ color: var(--color-primary) !important; }
+.contact .btn{ background: var(--color-primary) !important; border:none; }
 
 /* =================== FOOTER =================== */
 copyrightText {
-  padding:8px 40px; border-top:1px solid rgba(0,0,0,.1);
-  text-align:center; background-color:var(--color-light);
+  padding:8px 40px; border-top:1px solid rgba(255,255,255,.1);
+  text-align:center; background-color:var(--color-dark-alt) !important;
 }
-.copyrightText p { color:#333; }
-.copyrightText a { color:var(--color-primary); font-weight:500; text-decoration:none; }
+.copyrightText p { color:var(--color-subtext) !important; }
+.copyrightText a { color:var(--color-primary) !important; font-weight:500; text-decoration:none; }
 
 /* =================== RESPONSIVE =================== */
 @media screen and (max-width:991px){
@@ -240,251 +184,37 @@ copyrightText {
     display:flex; position:fixed; inset:0;
     flex-direction:column; align-items:flex-start; justify-content:flex-start;
     gap:16px; padding:100px 24px 24px;
-    background:rgba(255,255,255,.95); backdrop-filter:blur(8px);
+    background:rgba(17,17,17,.95) !important; backdrop-filter:blur(8px);
     z-index:10001;
   }
   header .navigation li{ margin-left:0; }
-  header .navigation li a{ color:var(--color-dark); font-size:1.4em; font-weight:300; }
+  header .navigation li a{ color:var(--color-text) !important; font-size:1.4em; font-weight:300; }
 
-  .menuToggle {
-    position:relative; width:40px; height:40px;
-    background:url(img/menu.png) center/30px no-repeat; cursor:pointer;
-  }
-  .menuToggle.active { background:url(img/close.png) center/25px no-repeat; }
-  header.sticky .menuToggle { filter:invert(1); }
+  .menuToggle { position:relative; width:40px; height:40px; cursor:pointer; }
 
   section{ padding:20px; }
   .banner .content h2{ font-size:3em; }
-
   .row{ flex-direction:column; }
   .row .col50{ width:100%; }
   .col50 .imgBx{ margin-top:30px; }
-
-  .menu .content{ margin-top:20px; }
-  .menu .content .box{ margin:10px; }
-  .menu .content .box .imgBx{ height:260px; }
-
-  .titleText{ font-size:1.8em; line-height:1.5em; margin-bottom:15px; }
-
-  .contact{ padding:70px 16px 80px; }
-  .contact .titleText{ font-size:2em; }
-  .contact-list{ grid-template-columns:1fr; }
-}
-
-@media screen and (max-width:440px){
-  .testimonials .content .box{ margin:10px; padding:20px; }
 }
 
 /* =================== MENÚ · TÍTULOS ITALIANOS =================== */
-/* Requiere que en <head> hayas cargado: https://fonts.googleapis.com/css2?family=Italianno&display=swap */
-
 #menu .item-name-italian{
   font-family:'Italianno', cursive !important;
   font-size: clamp(28px, 3.5vw, 40px) !important;
   line-height: 1.1 !important;
   text-align: center !important;
-  color: var(--color-dark, #1B1B1B) !important;
+  color: var(--color-white) !important;
   margin: 10px 0 4px !important;
 }
-
 #menu .item-name-italian[data-subtitle]::after{
   content: attr(data-subtitle);
   display: block !important;
   font-family: 'Playfair Display', serif !important;
   font-size: clamp(14px, 1.6vw, 16px) !important;
-  color: #5c5c5c !important;
+  color: var(--color-subtext) !important;
   line-height: 1.35 !important;
   text-align: center !important;
   margin-top: 3px !important;
 }
-
-/* Alternativa HTML explicita:
-   <small class="item-subtitle-italian">…</small> debajo del <h3> */
-#menu .item-subtitle-italian{
-  display: block !important;
-  font-family: 'Playfair Display', serif !important;
-  font-size: clamp(14px, 1.6vw, 16px) !important;
-  color: #5c5c5c !important;
-  line-height: 1.35 !important;
-  text-align: center !important;
-  margin-top: 3px !important;
-}
-/* --- Ajuste logo en versión mobile --- */
-@media (max-width: 768px) {
-  header .logo img {
-    height: 90px !important;  /* probá 80px, 90px o 100px */
-    width: auto !important;
-  }
-}
-
-/* ----- MENÚ MOBILE OVERLAY ----- */
-nav {
-  position: fixed;
-  inset: 0;                /* top/right/bottom/left: 0 */
-  padding: 80px 28px;      /* que respire */
-  background: rgba(250,243,224,0.88); /* crema translúcido */
-  backdrop-filter: blur(6px);          /* vidrio esmerilado */
-  transform: translateX(100%);
-  transition: transform .3s ease;
-  z-index: 999;
-}
-
-/* al abrir (le agregamos la clase .active por JS) */
-nav.active { transform: translateX(0); }
-
-/* lista vertical centrada */
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-/* links “italianos” */
-nav ul li a {
-  font-family: 'Playfair Display', serif; /* o Italianno para subtítulos */
-  font-size: 1.35rem;
-  letter-spacing: .5px;
-  color: #1B1B1B;            /* dark */
-  text-decoration: none;
-  transition: color .25s ease, transform .1s ease;
-}
-nav ul li a:active { transform: scale(0.98); }
-nav ul li a:hover { color: #D72638; }      /* rojo napolitano */
-
-/* opcional: separador sutil */
-nav ul li + li { border-top: 1px solid rgba(0,0,0,.06); padding-top: 14px; }
-
-/* botón hamburguesa (ya existente) arriba de todo */
-.menuToggle {
-  position: fixed; top: 18px; right: 18px;
-  width: 40px; height: 40px;
-  z-index: 1000; cursor: pointer;
-}
-
-/* ===== MENÚ MOBILE OVERLAY (para .navigation) ===== */
-@media (max-width: 991px){
-  /* estado base: fuera de pantalla, ocupa todo */
-  header .navigation{
-    position: fixed;
-    inset: 0;                       /* top/right/bottom/left: 0 */
-    padding: 80px 28px;
-    background: rgba(250,243,224,0.88);  /* crema translúcido */
-    backdrop-filter: blur(6px);          /* vidrio esmerilado */
-    transform: translateX(100%);
-    transition: transform .3s ease;
-    z-index: 10001;
-
-    /* layout vertical del menú */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 22px;
-  }
-
-  /* al abrir (cuando le agregues .active con JS) */
-  header .navigation.active{ transform: translateX(0); }
-
-  /* items y enlaces */
-  header .navigation li{ margin: 0; list-style: none; }
-  header .navigation li + li{ border-top:1px solid rgba(0,0,0,.06); padding-top:14px; }
-
-  header .navigation li a{
-    font-family: 'Playfair Display', serif;
-    font-size: 1.35rem;
-    letter-spacing: .5px;
-    color: #1B1B1B;
-    text-decoration: none;
-    transition: color .25s ease, transform .1s ease;
-  }
-  header .navigation li a:hover{ color:#D72638; }
-  header .navigation li a:active{ transform: scale(.98); }
-
-  /* botón hamburguesa siempre visible arriba */
-  .menuToggle{
-    position: fixed; top:18px; right:18px;
-    width:40px; height:40px;
-    background:url(img/menu.png) center/30px no-repeat;
-    z-index:10002; cursor:pointer;
-  }
-  .menuToggle.active{ background:url(img/close.png) center/25px no-repeat; }
-}
-
-/* ===== MENÚ ITALIANO con textura + franja tricolor ===== */
-@media (max-width: 991px){
-  /* capa base del overlay */
-  header .navigation{
-    position: fixed; inset: 0;
-    padding: 90px 28px 40px;
-    display: flex; flex-direction: column; gap: 26px;
-    transform: translateX(100%); transition: transform .3s ease;
-    z-index: 10001;
-    /* quitamos color plano; usamos transparencia para ver las pseudo-capaz */
-    background: transparent;
-    backdrop-filter: blur(8px);          /* vidrio esmerilado */
-  }
-  header .navigation.active{ transform: translateX(0); }
-
-  /* --- textura papel + viñeta suave --- */
-  header .navigation::before{
-    content:"";
-    position: absolute; inset:0;
-    background:
-      linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.0) 30%, rgba(0,0,0,.06) 100%),
-      url('img/texture-paper.jpg');           /* <-- subí una textura sutil (papel/mármol) */
-    background-size: cover;
-    background-position: center;
-    opacity:.92;
-    z-index:-2;
-  }
-
-  /* --- franja tricolor Italia al costado izquierdo --- */
-  header .navigation::after{
-    content:"";
-    position: absolute; left:0; top:0; bottom:0; width:8px;
-    background: linear-gradient(#009246 0 33.33%, #ffffff 33.33% 66.66%, #ce2b37 66.66% 100%);
-    box-shadow: 0 0 16px rgba(0,0,0,.08) inset;
-    z-index:-1;
-  }
-
-  /* items */
-  header .navigation li{ list-style:none; margin:0; padding-left:6px; }
-  header .navigation li + li{ border-top:1px solid rgba(0,0,0,.06); padding-top:16px; }
-
-  /* tipografía y subrayado elegante */
-  header .navigation li a{
-    font-family:'Playfair Display', serif;
-    font-weight:700;
-    font-size: clamp(22px, 5.6vw, 30px);
-    letter-spacing:.3px;
-    color:#1B1B1B;
-    text-decoration:none;
-    position: relative;
-    padding-left: 34px;                 /* espacio para el ícono */
-  }
-  /* subrayado animado */
-  header .navigation li a::after{
-    content:"";
-    position:absolute; left:34px; right:0; bottom:-6px; height:2px;
-    background: linear-gradient(90deg, #009246, #ffffff, #ce2b37);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform .25s ease;
-  }
-  header .navigation li a:hover::after{ transform: scaleX(1); }
-
-  /* emojis por item (sin tocar HTML) */
-  header .navigation li:nth-child(1) a::before{ content:"🏠"; position:absolute; left:0; }
-  header .navigation li:nth-child(2) a::before{ content:"🍅"; position:absolute; left:0; }
-  header .navigation li:nth-child(3) a::before{ content:"🍕"; position:absolute; left:0; }
-  header .navigation li:nth-child(4) a::before{ content:"📍"; position:absolute; left:0; }
-
-  /* botón hamburguesa/close fijo */
-  .menuToggle{
-    position: fixed; top:18px; right:18px;
-    width:40px; height:40px; z-index:10002; cursor:pointer;
-    background:url(img/menu.png) center/30px no-repeat;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
-  }
-  .menuToggle.active{ background:url(img/close.png) center/25px no-repeat; }
-}
-
