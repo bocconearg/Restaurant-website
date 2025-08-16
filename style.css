@@ -362,3 +362,51 @@ nav ul li + li { border-top: 1px solid rgba(0,0,0,.06); padding-top: 14px; }
   z-index: 1000; cursor: pointer;
 }
 
+/* ===== MENÚ MOBILE OVERLAY (para .navigation) ===== */
+@media (max-width: 991px){
+  /* estado base: fuera de pantalla, ocupa todo */
+  header .navigation{
+    position: fixed;
+    inset: 0;                       /* top/right/bottom/left: 0 */
+    padding: 80px 28px;
+    background: rgba(250,243,224,0.88);  /* crema translúcido */
+    backdrop-filter: blur(6px);          /* vidrio esmerilado */
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    z-index: 10001;
+
+    /* layout vertical del menú */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  /* al abrir (cuando le agregues .active con JS) */
+  header .navigation.active{ transform: translateX(0); }
+
+  /* items y enlaces */
+  header .navigation li{ margin: 0; list-style: none; }
+  header .navigation li + li{ border-top:1px solid rgba(0,0,0,.06); padding-top:14px; }
+
+  header .navigation li a{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    letter-spacing: .5px;
+    color: #1B1B1B;
+    text-decoration: none;
+    transition: color .25s ease, transform .1s ease;
+  }
+  header .navigation li a:hover{ color:#D72638; }
+  header .navigation li a:active{ transform: scale(.98); }
+
+  /* botón hamburguesa siempre visible arriba */
+  .menuToggle{
+    position: fixed; top:18px; right:18px;
+    width:40px; height:40px;
+    background:url(img/menu.png) center/30px no-repeat;
+    z-index:10002; cursor:pointer;
+  }
+  .menuToggle.active{ background:url(img/close.png) center/25px no-repeat; }
+}
+
