@@ -463,3 +463,39 @@ section { padding:100px; background-color:var(--color-light); }
   text-align: center;
   margin-top: 3px;
 }
+
+/* ===== MENÚ: nombre y subtítulo con aire italiano ===== */
+/* Requiere tener cargada la fuente Italianno en el <head> */
+
+#menu .item-name-italian{
+  font-family: 'Italianno', cursive !important;
+  font-size: clamp(28px, 3.5vw, 40px) !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+  color: var(--color-dark, #1B1B1B) !important;
+  margin: 10px 0 4px !important;
+}
+
+/* Subtítulo desde el atributo data-subtitle (plan A) */
+#menu .item-name-italian[data-subtitle]::after{
+  content: attr(data-subtitle);
+  display: block !important;
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(14px, 1.6vw, 16px) !important;
+  color: #5c5c5c !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+  margin-top: 3px !important;
+}
+
+/* Opcional: si preferís HTML explícito (plan B)
+   <small class="item-subtitle-italian">…</small> justo debajo del <h3> */
+#menu .item-subtitle-italian{
+  display: block !important;
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(14px, 1.6vw, 16px) !important;
+  color: #5c5c5c !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+  margin-top: 3px !important;
+}
