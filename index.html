@@ -58,47 +58,61 @@
     <div class="red"></div>
   </div>
 
-  <!-- Menú -->
-  <section class="menu" id="menu">
-    <div class="title">
-      <h2 class="titleText"><span>M</span>enú</h2>
-      <p>Descubrí nuestras pizzas estilo napolitano, hechas con masa de fermentación lenta.</p>
+<!-- ===== MENU ===== -->
+<section id="menu" class="menu section">
+  <div class="container">
+    <h2 class="menu-title">Il Menù</h2>
+
+    <div class="menu-grid">
+      <!-- Margherita -->
+      <article class="menu-item">
+        <img src="img/pizzas/margherita.jpg" alt="Pizza Margherita" loading="lazy">
+        <h3 class="item-name">Margherita</h3>
+        <p class="item-subtitle">La reina de Nápoles: tomate, mozzarella y albahaca fresca.</p>
+      </article>
+
+      <!-- Roquefort -->
+      <article class="menu-item">
+        <img src="img/pizzas/roquefort.jpg" alt="Pizza Roquefort" loading="lazy">
+        <h3 class="item-name">Roquefort</h3>
+        <p class="item-subtitle">Un toque francés en corazón italiano, intenso y cremoso.</p>
+      </article>
+
+      <!-- Prosciutto (con jamón cocido y morrones asados) -->
+      <article class="menu-item">
+        <img src="img/pizzas/prosciutto.jpg" alt="Pizza Prosciutto" loading="lazy">
+        <h3 class="item-name">Prosciutto</h3>
+        <p class="item-subtitle">Jamón cocido y morrones asados, sabor casero y abundante.</p>
+      </article>
+
+      <!-- Mozzarella -->
+      <article class="menu-item">
+        <img src="img/pizzas/mozzarella.jpg" alt="Pizza Mozzarella" loading="lazy">
+        <h3 class="item-name">Mozzarella</h3>
+        <p class="item-subtitle">Simple y auténtica: mozzarella fundida en su máxima expresión.</p>
+      </article>
+
+      <!-- Marinara -->
+      <article class="menu-item">
+        <img src="img/pizzas/marinara.jpg" alt="Pizza Marinara" loading="lazy">
+        <h3 class="item-name">Marinara</h3>
+        <p class="item-subtitle">La más antigua: tomate, ajo y orégano, sin distracciones.</p>
+      </article>
+
+      <!-- Peperoni -->
+      <article class="menu-item">
+        <img src="img/pizzas/peperoni.jpg" alt="Pizza Peperoni" loading="lazy">
+        <h3 class="item-name">Peperoni</h3>
+        <p class="item-subtitle">Picante, jugosa y tentadora: un clásico que nunca falla.</p>
+      </article>
     </div>
 
-    <div class="content">
-      <div class="box">
-        <div class="imgBx"><img src="IMG-20250813-WA0003.jpg" alt="Pizza Margarita"></div>
-        <div class="text"><h3>Margarita</h3></div>
-      </div>
-
-      <div class="box">
-        <div class="imgBx"><img src="img/Roquefort.png" alt="Pizza Roquefort"></div>
-        <div class="text"><h3>Roquefort</h3></div>
-      </div>
-
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Prosciutto"></div>
-        <div class="text"><h3>Prosciutto</h3></div>
-      </div>
-
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Mozzarella"></div>
-        <div class="text"><h3>Mozzarella</h3></div>
-      </div>
-
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Marinara"></div>
-        <div class="text"><h3>Marinara</h3></div>
-      </div>
-
-      <div class="box">
-        <div class="imgBx"><img data-random alt="Pizza Peperoni"></div>
-        <div class="text"><h3>Peperoni</h3></div>
-      </div>
+    <div class="menu-actions">
+      <a href="#menu-completo" class="btn-italian">Ver pizzas</a>
     </div>
+  </div>
+</section>
 
-    <div class="title"><a href="#" class="btn">Ver Todo</a></div>
-  </section>
 
   <!-- Contacto -->
   <section class="contact" id="contact" aria-label="Sección de contacto">
