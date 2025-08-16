@@ -416,4 +416,21 @@ copyrightText {
     display:block !important;
   }
 }
+/* Ajuste de jerarquía en menú de pizzas */
+.menu .content .box .text h3 {
+  font-size: 1.6rem !important;   /* Nombre de la pizza más grande */
+  font-weight: 700 !important;
+  font-family: 'Playfair Display', serif !important;
+  margin-bottom: 5px !important;
+}
+
+.menu .content .box .text h3 .subtitle {
+  display: block;
+  font-size: 1rem !important;    /* Subtítulo más chico */
+  font-weight: 400 !important;
+  font-family: 'Inter', sans-serif !important;
+  color: #ccc !important;        /* Gris suave, más delicado */
+  margin-top: 3px !important;
+}
+
 
