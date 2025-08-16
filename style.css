@@ -591,6 +591,99 @@ header.sticky .menuToggle{ filter:none !important; }
   #about .col50{ width:100%; }
   #about .imgBx{ margin-top: 18px; }
 }
+/* ===== MENÚ · Estilo premium italiano como "Sobre Nosotros" ===== */
+#menu{
+  background:#111;                 /* fondo negro elegante */
+  color:#E0E0E0;
+  padding-top: 48px;               /* separa del divisor tricolor */
+}
+
+/* Título */
+#menu .title .titleText{
+  font-family:'Playfair Display', serif;
+  color:#fff;
+  font-weight:700;
+  font-size: clamp(28px, 4.8vw, 40px);
+  letter-spacing:.3px;
+  margin: 0 0 10px 0;
+  text-align:center;               /* centrado como tu captura */
+  position:relative;
+  display:inline-block;
+}
+
+/* Primera letra roja cursiva: ya usás <span>M</span> */
+#menu .title .titleText > span{
+  font-family:'Italianno', cursive;
+  color:#D72638;
+  font-size:1.35em;
+  line-height:.9;
+  margin-right:2px;
+}
+
+/* Línea tricolor debajo del título */
+#menu .title .titleText::after{
+  content:"";
+  display:block;
+  width:84px; height:3px;
+  margin:10px auto 0;
+  background:linear-gradient(90deg,#009246 0 33%, #ffffff 33% 66%, #ce2b37 66% 100%);
+  border-radius:2px;
+}
+
+/* Texto descriptivo bajo el título */
+#menu .title p{
+  font-family:'Crimson Text', serif;   /* opcional; si no la cargaste usa Inter */
+  font-size: clamp(16px, 2.4vw, 18px);
+  line-height:1.7;
+  color:#E0E0E0;
+  max-width:720px;
+  margin:14px auto 26px;
+  text-align:center;
+}
+
+/* Cards del menú: bordes suaves y profundidad sobre negro */
+#menu .content .box{
+  background:#151515;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  overflow:hidden;
+}
+
+/* Imágenes redondeadas */
+#menu .content .box .imgBx{ border-bottom:1px solid rgba(255,255,255,.06); }
+#menu .content .box .imgBx img{
+  display:block; width:100%; height:100%; object-fit:cover;
+}
+
+/* Nombre + subtítulo en las cards */
+#menu .content .box .text{ padding:16px 16px 18px; }
+#menu .content .box .text .item-name-italian{
+  font-family:'Italianno', cursive;
+  font-size: clamp(26px, 3.6vw, 36px);
+  line-height:1.1;
+  color:#fff;
+  text-align:center;
+}
+#menu .content .box .text .subtitle{
+  display:block;
+  font-family:'Crimson Text', serif;
+  font-size: clamp(14px, 2vw, 16px);
+  color:#CFCFCF;
+  margin-top:6px;
+}
+
+/* Botón "Ver Todo" adaptado al fondo negro */
+#menu .title .btn{
+  background:#D72638;
+  color:#fff;
+  border-radius:10px;
+  padding:12px 26px;
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:.5px;
+}
+#menu .title .btn:hover{ background:#b71c2b; }
 
 
 
