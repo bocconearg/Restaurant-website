@@ -271,4 +271,92 @@ copyrightText {
   background: #D72638;
   color: #fff;
 }
+/* ==== FIX CONTACTO PREMIUM (override) ==== */
+
+/* 0) Fondo y texto a juego */
+#contact,
+.contact {
+  background: #111 !important;
+  color: #f2f2f2 !important;
+}
+
+/* 1) Tarjeta elegante (sin bordes duros, con sombra suave) */
+.contact-card{
+  background: #151515 !important;
+  border: 1px solid #222 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 38px rgba(0,0,0,.45) !important;
+  padding: 28px !important;
+}
+
+/* 2) Lista sin viñetas ni “líneas de planilla” */
+.contact-list{
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 18px 0 14px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+.contact-list li{
+  list-style: none !important;
+  background: #1b1b1b !important;
+  border: 0 !important;                           /* quitamos líneas */
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-shadow: 0 1px 0 #262626 inset, 0 10px 24px rgba(0,0,0,.25) !important;
+}
+.contact-list li::marker{ content: "" !important; } /* por si algún user-agent insiste */
+
+/* 3) Íconos más delicados (SVG) */
+.contact-list svg{
+  width: 22px !important;
+  height: 22px !important;
+  stroke-width: 2 !important;
+  opacity: .9 !important;
+}
+.contact-list a,
+.contact-list span{
+  color: #e6e6e6 !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+}
+.contact-list a:hover{ color: #D72638 !important; }
+
+/* 4) Botones “outline premium” */
+.contact-actions{ gap: 10px !important; }
+.contact .btn{
+  background: #D72638 !important;
+  border-radius: 999px !important;
+  padding: 10px 22px !important;
+  letter-spacing: .6px !important;
+}
+.contact .btn.btn-light{
+  background: transparent !important;
+  border: 1px solid #D72638 !important;
+  color: #D72638 !important;
+}
+.contact .btn.btn-light:hover{
+  background: rgba(215,38,56,.12) !important;
+}
+
+/* 5) Footer: asegurar estilos (el selector correcto lleva punto) */
+.copyrightText{
+  background: #111 !important;
+  border-top: 1px solid #262626 !important;
+}
+.copyrightText p{ color:#bdbdbd !important; }
+
+/* 6) Título y subtítulo del bloque contacto */
+#contact .title .titleText{ color:#fff !important; }
+#contact .title p{ color:#bdbdbd !important; }
+
+/* 7) Responsive: que la tarjeta no “pese” en mobile */
+@media (max-width: 600px){
+  .contact-card{ padding: 22px !important; }
+  .contact-list li{ padding: 12px !important; }
+}
 
