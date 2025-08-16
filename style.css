@@ -359,4 +359,52 @@ copyrightText {
   .contact-card{ padding: 22px !important; }
   .contact-list li{ padding: 12px !important; }
 }
+/* ==== CONTACTO: BOTONES DESTACADOS ==== */
+.contact-actions{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
 
+.contact .btn{
+  background: var(--tomato);   /* rojo napolitano */
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s ease;
+  min-width: 160px;
+  text-align: center;
+}
+.contact .btn:hover{
+  background: #b71c2b;         /* rojo más oscuro al hover */
+  transform: translateY(-2px);
+}
+
+.contact .btn.btn-light{
+  background: transparent;
+  border: 2px dashed #CDBFAF;
+  color: var(--ink);
+}
+.contact .btn.btn-light:hover{
+  border-style: solid;
+  background: #faf6f0;
+}
+
+/* Versión mobile: que ocupen todo el ancho */
+@media (max-width: 480px){
+  .contact-actions{
+    flex-direction: column;
+    gap: 14px;
+  }
+  .contact .btn,
+  .contact .btn.btn-light{
+    width: 100%;
+  }
+}
