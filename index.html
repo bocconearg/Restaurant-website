@@ -284,6 +284,59 @@
   window.addEventListener('resize', onScroll);
 })();
 </script>
+  <script>
+(function(){
+  // Activar SOLO en mobile/tablet
+  const isMobile = window.innerWidth < 992;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!isMobile || prefersReduced) return;
+
+  // 1) Marcar elementos a revelar (sin tocar HTML)
+  const revealTargets = [
+    '.title',                 // títulos de secciones
+    '.about .row',            // bloque "Sobre"
+    '.menu .content .box',    // cards del menú
+    '.contact-card'           // card de contacto
+  ];
+  const nodes = document.querySelectorAll(revealTargets.join(','));
+  nodes.forEach((el, i) => {
+    el.classList.add('reveal');
+    // índice para stagger (solo en cards del menú contamos por fila)
+    if (el.matches('.menu .content .box')) {
+      el.setAttribute('data-reveal-i', i % 6); // hasta 6 delays
+    }
+  });
+
+  // 2) IntersectionObserver para ir revelando
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // 3) Header: oscurecer sutilmente al scrollear
+  let lastY = 0;
+  function onScroll(){
+    const y = window.scrollY || window.pageYOffset;
+    const header = document.querySelector('header');
+    if (!header) return;
+    if (y > 8 && !header.classList.contains('header-scrolled')){
+      header.classList.add('header-scrolled');
+    } else if (y <= 8 && header.classList.contains('header-scrolled')){
+      header.classList.remove('header-scrolled');
+    }
+    lastY = y;
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive:true });
+})();
+</script>
+
 
 </body>
 </html>
