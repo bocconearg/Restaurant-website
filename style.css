@@ -1,13 +1,22 @@
+/* =================== FUENTES =================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
+/* =================== VARIABLES =================== */
 :root {
   --color-primary:#D72638;
   --color-accent:#2E7D32;
   --color-dark:#1B1B1B;
   --color-light:#FAF3E0;
   --color-white:#FFFFFF;
+
+  /* Paleta retro contacto */
+  --cream: #F7EFE3;
+  --sage:  #6A8F6E;
+  --tomato:#D72638;
+  --ink:   #1B1B1B;
 }
 
+/* =================== BASE =================== */
 * {
   font-family:'Inter',sans-serif;
   box-sizing:border-box;
@@ -17,7 +26,7 @@
 }
 p { font-weight:300; color:var(--color-dark); }
 
-/* ---------------- LOGO ---------------- */
+/* =================== LOGO =================== */
 .logo { width:160px; height:auto; display:inline-flex; align-items:center; gap:6px; }
 .logo img { height:100px; width:auto; display:block; max-width:100%; }
 header .logo { font-size:1.2em; line-height:1; }
@@ -28,7 +37,7 @@ header .logo span { font-weight:700; font-size:1.6em; line-height:1; }
   .logo img{ height:44px; }
 }
 
-/* ---------------- BANNER ---------------- */
+/* =================== BANNER =================== */
 .banner {
   position:relative; width:100%; min-height:100vh;
   display:flex; justify-content:center; align-items:center;
@@ -38,7 +47,7 @@ header .logo span { font-weight:700; font-size:1.6em; line-height:1; }
 .banner .content h2{ font-family:'Playfair Display',serif; font-size:5em; color:var(--color-white); text-transform:capitalize; }
 .banner .content p{ font-size:1em; color:var(--color-white); }
 
-/* ---------------- BOTONES ---------------- */
+/* =================== BOTONES =================== */
 .btn {
   font-size:1em; color:var(--color-white); background:var(--color-primary);
   display:inline-block; padding:10px 30px; margin-top:20px; text-transform:uppercase;
@@ -47,7 +56,7 @@ header .logo span { font-weight:700; font-size:1.6em; line-height:1; }
 .btn:hover{ letter-spacing:6px; }
 .btn.btn-light{ background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.4); }
 
-/* ---------------- HEADER ---------------- */
+/* =================== HEADER =================== */
 header {
   position:fixed; top:0; left:0; width:100%;
   padding:15px 40px;
@@ -66,7 +75,7 @@ header .navigation li a { text-decoration:none; color:var(--color-white); font-w
 header.sticky .navigation li a { color:var(--color-dark); }
 header .navigation li a:hover { color:var(--color-primary); }
 
-/* ---------------- SECCIONES ---------------- */
+/* =================== SECCIONES =================== */
 section { padding:100px; background-color:var(--color-light); }
 .title { text-align:center; }
 .titleText { color:var(--color-dark); font-size:2em; font-weight:300; font-family:'Playfair Display',serif; }
@@ -76,7 +85,7 @@ section { padding:100px; background-color:var(--color-light); }
 .row .col50 { position:relative; width:48%; }
 .imgBx img{ max-width:100%; width:100%; height:auto; }
 
-/* ---------------- MENU GRID ---------------- */
+/* =================== MENÚ GRID =================== */
 .menu .content { 
   display:flex; justify-content:center; flex-direction:row-reverse; flex-wrap:wrap; margin-top:40px; 
 }
@@ -85,8 +94,8 @@ section { padding:100px; background-color:var(--color-light); }
   margin:20px; 
   box-shadow:0 5px 35px rgba(0,0,0,0.08); 
   background-color:var(--color-light);
-  border-radius:16px; /* redondeo */
-  overflow:hidden;    /* asegura que la imagen respete el borde redondeado */
+  border-radius:16px;
+  overflow:hidden;
 }
 .menu .content .box .imgBx { position:relative; width:100%; height:300px; }
 .menu .content .box .imgBx img { 
@@ -98,7 +107,7 @@ section { padding:100px; background-color:var(--color-light); }
 .menu .content .box .text { padding:15px 0 5px; }
 .menu .content .box .text h3 { font-weight:400; color:var(--color-dark); }
 
-/* ---------------- EXPERT ---------------- */
+/* =================== EXPERT =================== */
 .expert .content { display:flex; justify-content:center; flex-wrap:wrap; margin-top:40px; }
 .expert .content .box { width:250px; margin:15px; background-color:var(--color-light); }
 .expert .content .box .imgBx { position:relative; width:100%; height:300px; }
@@ -106,7 +115,7 @@ section { padding:100px; background-color:var(--color-light); }
 .expert .content .box .text { padding:15px 0 5px; }
 .expert .content .box .text h3 { font-weight:400; color:var(--color-dark); }
 
-/* ---------------- TESTIMONIOS ---------------- */
+/* =================== TESTIMONIOS =================== */
 .testimonials { background:url(img/bg2.jpg) center/cover no-repeat; }
 .white .titleText, .white p { color:var(--color-white); }
 .testimonials .content { display:flex; justify-content:center; flex-wrap:wrap; flex-direction:row; margin-top:40px; }
@@ -120,58 +129,110 @@ section { padding:100px; background-color:var(--color-light); }
 .testimonials .content .box .text p { color:#666; font-style:italic; }
 .testimonials .content .box .text h3 { margin-top:20px; color:var(--color-primary); font-size:1em; font-weight:600; }
 
-/* ---------------- CONTACTO ---------------- */
-.contact {
-  position:relative;
-  background:url('img/ingredientes.jpg') center/cover no-repeat;
-  color:#fff; padding:100px 20px;
-}
-.contact .overlay { position:absolute; inset:0; background:rgba(0,0,0,.45); }
-.contact .titleText { color:#fff; }
+/* =================== DIVISOR ITALIANO =================== */
+.italian-divider { width: 100%; height: 12px; display: flex; }
+.italian-divider::before,
+.italian-divider::after,
+.italian-divider div { content: ""; flex: 1; }
+.italian-divider::before { background: #009246; } /* Verde Italia */
+.italian-divider div { background: #ffffff; }     /* Blanco */
+.italian-divider::after { background: #ce2b37; }  /* Rojo Italia */
 
-.contact-card {
-  position:relative; z-index:1;
-  max-width:900px; margin:0 auto;
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:14px;
-  padding:28px 28px 24px;
-  color:#fff;
+/* =================== CONTACTO (ESTILO RETRO ITALIANO) =================== */
+.contact{
+  position: relative;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 90px 20px 100px;
 }
-.contact-head { text-align:center; margin-bottom:12px; }
-.contact-head p { color:rgba(255,255,255,.9); font-weight:400; }
-
-.contact-list {
-  list-style:none; margin:18px 0 14px; padding:0;
-  display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;
-}
-.contact-list li {
-  display:flex; align-items:center; gap:10px;
-  padding:10px 12px; border-radius:10px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.15);
-}
-.contact-list img { width:22px; height:22px; filter:brightness(0) invert(1); }
-.contact-list a, .contact-list span { color:#fff; text-decoration:none; font-weight:500; }
-.contact-list a:hover { color:var(--color-primary); }
-
-.contact-actions {
-  display:flex; gap:12px; justify-content:center; margin-top:14px; flex-wrap:wrap;
+.contact::before{
+  content:"";
+  position: absolute; left:0; top:0; width:100%; height:8px;
+  background: linear-gradient(90deg, #2E7D32 0 33.33%, #FFFFFF 33.33% 66.66%, #D72638 66.66% 100%);
 }
 
-/* oculta form viejo */
-.contactForm { display:none !important; }
+/* ocultamos overlays viejos si existieran */
+.contact .overlay{ display:none !important; }
 
-/* ---------------- FOOTER ---------------- */
-.copyrightText {
+/* Card */
+.contact-card{
+  position: relative; z-index:1;
+  max-width: 980px; margin: 0 auto;
+  background: #FFFFFFE6;
+  border: 1px solid #E7DCCD;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  padding: 28px;
+  color: var(--ink);
+
+  /* grid interno */
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 18px;
+}
+
+/* Título/subtítulo */
+.contact .titleText{ color: var(--ink); line-height: 1.15; margin: 0; }
+.contact .titleText span{ color: var(--tomato); }
+.contact-head{ display:block; position:relative; margin:0 0 6px 0; line-height:1.2; }
+.contact-head p{ margin-top:6px; color:#594F43; font-weight:400; }
+
+/* Lista */
+.contact-list{
+  list-style: none; margin: 0 !important; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px 22px; position:relative;
+}
+.contact-list li{
+  display: flex; align-items: center; gap: 10px;
+  min-height: 48px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #FAF6F0;
+  border: 1px solid #EDE3D6;
+}
+.contact-list li:hover { background: #f2eee8; } /* <- corregido ; y } */
+
+.contact-list img{
+  width: 22px; height: 22px; flex: 0 0 22px;
+  object-fit: contain; opacity:.9; filter:none;
+}
+.contact-list a, .contact-list span{
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.3;
+  word-break: break-word;
+}
+.contact-list a:hover{ color: var(--tomato); }
+
+/* Acciones */
+.contact-actions{ display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start; margin-top:4px !important; }
+.contact .btn{ background: var(--tomato); border:none; }
+.contact .btn.btn-light{
+  background: transparent;
+  border: 1px dashed #CDBFAF;
+  color: var(--ink);
+}
+.contact .btn.btn-light:hover{ border-style: solid; }
+
+/* Íconos SVG nítidos */
+.contact-list svg{ width:24px; height:24px; display:block; }
+.contact-icon { stroke: currentColor; fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; shape-rendering: geometricPrecision; }
+.icon--whatsapp { color:#25D366; }
+.icon--instagram{ color:#E1306C; }
+.icon--pin      { color:#d32f2f; }
+.icon--clock    { color:#555; }
+
+/* =================== FOOTER =================== */
+copyrightText {
   padding:8px 40px; border-top:1px solid rgba(0,0,0,.1);
   text-align:center; background-color:var(--color-light);
 }
 .copyrightText p { color:#333; }
 .copyrightText a { color:var(--color-primary); font-weight:500; text-decoration:none; }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* =================== RESPONSIVE =================== */
 @media screen and (max-width:991px){
   header, header.sticky{ padding:10px 20px; }
   header .navigation { display:none; }
@@ -205,270 +266,20 @@ section { padding:100px; background-color:var(--color-light); }
 
   .titleText{ font-size:1.8em; line-height:1.5em; margin-bottom:15px; }
 
-  .contact{ padding:70px 16px; }
+  .contact{ padding:70px 16px 80px; }
   .contact .titleText{ font-size:2em; }
   .contact-list{ grid-template-columns:1fr; }
-}
-
-/* ===== CONTACTO · Estilo italiano retro alegre ===== */
-
-/* Paleta retro */
-:root{
-  --cream: #F7EFE3;
-  --sage:  #6A8F6E;   /* verde salvia */
-  --tomato:#D72638;   /* tu rojo */
-  --ink:   #1B1B1B;
-}
-
-/* Fondo crema + franja tricolor superior */
-.contact{
-  position: relative;
-  background: var(--cream);
-  color: var(--ink);
-  padding: 90px 20px 100px;
-}
-.contact::before{
-  content:"";
-  position: absolute; left:0; top:0; width:100%; height:8px;
-  background: linear-gradient(90deg, #2E7D32 0 33.33%, #FFFFFF 33.33% 66.66%, #D72638 66.66% 100%);
-}
-
-/* Quitamos overlay gris previo si quedó */
-.contact .overlay{ display:none !important; }
-
-/* Card tipo “tarjeta vintage” */
-.contact-card{
-  position: relative; z-index:1;
-  max-width: 980px; margin: 0 auto;
-  background: #FFFFFFE6; /* blanco 90% */
-  border: 1px solid #E7DCCD;
-  border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(0,0,0,.08);
-  padding: 28px;
-  color: var(--ink);
-}
-
-/* Título y subtítulo, sin superposiciones */
-.contact .titleText{
-  color: var(--ink);
-  line-height: 1.15;
-  margin: 0;
-}
-.contact .titleText span{ color: var(--tomato); }
-.contact-head{ text-align:left; margin-bottom: 18px; }
-.contact-head p{
-  margin-top: 6px;
-  color: #594F43;
-  font-weight: 400;
-}
-
-/* Lista de datos: grid prolijo */
-.contact-list{
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 14px 22px;
-}
-.contact-list li{
-  display: flex; align-items: center; gap: 10px;
-  min-height: 44px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: #FAF6F0;                 /* pill suave */
-  border: 1px solid #EDE3D6;
-}
-.contact-list img{
-  width: 20px; height: 20px; flex: 0 0 20px;
-  filter: none;                         /* en card claro no invertimos */
-  opacity: .9;
-}
-.contact-list a, .contact-list span{
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.25;
-  word-break: break-word;
-}
-.contact-list a:hover{ color: var(--tomato); }
-
-/* Botones */
-.contact-actions{
-  display: flex; gap: 12px; flex-wrap: wrap;
-  justify-content: flex-start; margin-top: 18px;
-}
-.contact .btn{
-  background: var(--tomato);
-  border: none;
-}
-.contact .btn.btn-light{
-  background: transparent;
-  border: 1px dashed #CDBFAF;
-  color: var(--ink);
-}
-.contact .btn.btn-light:hover{
-  border-style: solid;
-}
-
-/* Responsive: una columna y más aire */
-@media (max-width: 900px){
-  .contact-list{ grid-template-columns: 1fr; }
-  .contact-card{ padding: 24px; }
-}
-@media (max-width: 480px){
-  .contact{ padding: 70px 16px 80px; }
-  .contact .titleText{ font-size: 1.8em; }
 }
 
 @media screen and (max-width:440px){
   .testimonials .content .box{ margin:10px; padding:20px; }
 }
 
-/* === DIVISOR ITALIANO === */
-.italian-divider {
-  width: 100%;
-  height: 12px;
-  display: flex;
-}
-
-.italian-divider::before,
-.italian-divider::after,
-.italian-divider div {
-  content: "";
-  flex: 1;
-}
-
-.italian-divider::before {
-  background: #009246; /* Verde Italia */
-}
-
-.italian-divider div {
-  background: #ffffff; /* Blanco */
-}
-
-.italian-divider::after {
-  background: #ce2b37; /* Rojo Italia */
-}
-
-/* === FIX superposición en CONTACTO === */
-
-/* Si quedó un .title viejo dentro de #contact, ocultarlo */
-#contact > .title { display: none !important; }
-
-/* El card del contacto en 3 filas: título, lista y acciones */
-.contact-card{
-  display: grid;
-  grid-template-rows: auto auto auto;
-  row-gap: 18px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Título sin traslapes */
-.contact-head{
-  display: block;
-  position: relative;
-  margin: 0 0 6px 0;   /* deja aire sobre la lista */
-  line-height: 1.2;
-}
-
-/* Lista sin márgenes fantasmas */
-.contact-list{
-  margin: 0 !important;
-  position: relative;
-}
-
-/* Cada item con altura mínima estable y sin colapsar */
-.contact-list li{
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-}
-
-/* Íconos: ancho/alto fijo; si no tenés PNGs, no rompas el layout */
-.contact-list img{
-  width: 22px; height: 22px; flex: 0 0 22px;
-  object-fit: contain;
-}
-
-/* Texto de los items: evitar quiebres raros */
-.contact-list a,
-.contact-list span{
-  line-height: 1.3;
-  word-break: break-word;
-}
-
-/* Botones alineados y con aire extra arriba */
-.contact-actions{
-  margin-top: 4px !important;
-}
-
-/* ===== Estética italiana retro para el fondo del bloque ===== */
-.contact{
-  background: var(--cream, #F7EFE3);
-}
-.italian-divider::after {
-  background: #ce2b37; /* Rojo Italia */
-}
-
-.icon-whatsapp { fill: #25D366; }   /* Verde WhatsApp */
-.icon-instagram { fill: #E1306C; } /* Rosa Instagram */
-.icon-location { fill: #d32f2f; }  /* Rojo Dirección */
-.icon-clock { fill: #555; }        /* Gris Horarios */
-
-/* ===== ICONOS CONTACTO NÍTIDOS ===== */
-.contact-list svg{
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-.contact-icon {
-  stroke: currentColor;     /* hereda el color */
-  fill: none;
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;  /* evita que el trazo se “engorde” al escalar */
-  shape-rendering: geometricPrecision;/* bordes precisos */
-}
-
-/* Colores por ícono (podés ajustarlos fácil) */
-.icon--whatsapp { color: #25D366; }  /* verde WhatsApp */
-.icon--instagram { color: #E1306C; } /* rosado Instagram */
-.icon--pin { color: #d32f2f; }       /* rojo ubicación */
-.icon--clock { color: #555; }        /* gris horario */
-
-/* Hover sutil (opcional) */
-.contact-list li:hover { background: #f2eee8
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Italianno&display=swap');
-
-/* Nombre de pizza */
-#menu .item-name-italian {
-  font-family:'Italianno', cursive;
-  font-size: clamp(28px, 3.5vw, 40px);
-  line-height: 1.1;
-  text-align: center;
-  color: var(--color-dark, #1B1B1B);
-  margin: 10px 0 4px;
-}
-
-/* Subtítulo debajo del nombre */
-#menu .item-name-italian[data-subtitle]::after {
-  content: attr(data-subtitle);
-  display: block;
-  font-family:'Playfair Display', serif;
-  font-size: clamp(14px, 1.6vw, 16px);
-  color: #5c5c5c;
-  line-height: 1.35;
-  text-align: center;
-  margin-top: 3px;
-}
-
-/* ===== MENÚ: nombre y subtítulo con aire italiano ===== */
-/* Requiere tener cargada la fuente Italianno en el <head> */
+/* =================== MENÚ · TÍTULOS ITALIANOS =================== */
+/* Requiere que en <head> hayas cargado: https://fonts.googleapis.com/css2?family=Italianno&display=swap */
 
 #menu .item-name-italian{
-  font-family: 'Italianno', cursive !important;
+  font-family:'Italianno', cursive !important;
   font-size: clamp(28px, 3.5vw, 40px) !important;
   line-height: 1.1 !important;
   text-align: center !important;
@@ -476,7 +287,6 @@ section { padding:100px; background-color:var(--color-light); }
   margin: 10px 0 4px !important;
 }
 
-/* Subtítulo desde el atributo data-subtitle (plan A) */
 #menu .item-name-italian[data-subtitle]::after{
   content: attr(data-subtitle);
   display: block !important;
@@ -488,8 +298,8 @@ section { padding:100px; background-color:var(--color-light); }
   margin-top: 3px !important;
 }
 
-/* Opcional: si preferís HTML explícito (plan B)
-   <small class="item-subtitle-italian">…</small> justo debajo del <h3> */
+/* Alternativa HTML explicita:
+   <small class="item-subtitle-italian">…</small> debajo del <h3> */
 #menu .item-subtitle-italian{
   display: block !important;
   font-family: 'Playfair Display', serif !important;
