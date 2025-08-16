@@ -218,3 +218,57 @@ copyrightText {
   text-align: center !important;
   margin-top: 3px !important;
 }
+.contact-box {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.contact-item .icon {
+  width: 40px;
+  height: 40px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.contact-item .text {
+  color: #ddd;
+  font-size: 16px;
+}
+
+.contact-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-outline {
+  border: 1px solid #D72638;
+  color: #D72638;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: #D72638;
+  color: #fff;
+}
+
