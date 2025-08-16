@@ -408,3 +408,12 @@ copyrightText {
     width: 100%;
   }
 }
+@media (max-width:768px){
+  header .logo img {
+    height:100px !important;   /* ajustá 90–110px a gusto */
+    width:auto !important;
+    max-width:none !important; /* evita que se achique automáticamente */
+    display:block !important;
+  }
+}
+
