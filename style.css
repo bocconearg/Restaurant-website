@@ -524,6 +524,73 @@ header.sticky .menuToggle{ filter:none !important; }
   0%   { transform: scale(1); opacity: 0.85; }
   100% { transform: scale(1.08); opacity: 1; }
 }
+/* ===== SOBRE NOSOTROS · Premium italiano sobre fondo negro ===== */
+#about{
+  background:#111;                 /* negro elegante */
+  color:#E0E0E0;
+  padding: 60px 20px;              /* separa del resto */
+}
+
+#about .row{
+  align-items: center;
+  gap: 28px;
+}
+
+#about .titleText{
+  font-family:'Playfair Display', serif;
+  color:#fff;
+  font-weight:700;
+  font-size: clamp(28px, 4.8vw, 40px);
+  letter-spacing:.3px;
+  margin: 0 0 14px 0;
+  text-align:left;
+  position:relative;
+  display:inline-block;
+}
+
+/* La “S” roja que ya tenés como <span> */
+#about .titleText > span{
+  font-family:'Italianno', cursive;
+  color:#D72638;          /* rojo napolitano */
+  font-size: 1.35em;
+  line-height:.9;
+  margin-right:2px;
+  display:inline-block;
+}
+
+/* Línea tricolor sutil bajo el título */
+#about .titleText::after{
+  content:"";
+  display:block;
+  width:84px; height:3px;
+  margin-top:10px;
+  background: linear-gradient(90deg,#009246 0 33%, #ffffff 33% 66%, #ce2b37 66% 100%);
+  border-radius:2px;
+}
+
+/* Párrafo elegante y legible */
+#about p{
+  font-family:'Crimson Text', serif;   /* si no agregás la fuente, podés dejar Inter */
+  font-size: clamp(16px, 2.4vw, 18px);
+  line-height:1.75;
+  color:#E0E0E0;
+  max-width: 720px;
+}
+
+/* Imagen con borde suave y profundidad */
+#about .imgBx img{
+  border-radius:14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  width:100%; height:auto; display:block;
+}
+
+/* Responsive: stack limpio */
+@media (max-width: 991px){
+  #about{ padding: 44px 20px; }
+  #about .row{ gap: 18px; }
+  #about .col50{ width:100%; }
+  #about .imgBx{ margin-top: 18px; }
+}
 
 
 
