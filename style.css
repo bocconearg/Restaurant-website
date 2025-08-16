@@ -466,6 +466,55 @@ header.sticky .menuToggle{ filter:none !important; }
     transition: none !important;
   }
 }
+/* === Mobile motion pack === */
+
+/* Reveal base (invisible hasta entrar al viewport) */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger suave en móviles: pequeños delays */
+@media (max-width: 991px){
+  .reveal[data-reveal-i="0"] { transition-delay: .00s; }
+  .reveal[data-reveal-i="1"] { transition-delay: .06s; }
+  .reveal[data-reveal-i="2"] { transition-delay: .12s; }
+  .reveal[data-reveal-i="3"] { transition-delay: .18s; }
+  .reveal[data-reveal-i="4"] { transition-delay: .24s; }
+  .reveal[data-reveal-i="5"] { transition-delay: .30s; }
+}
+
+/* Header: leve cambio en scroll para dar “profundidad” */
+@media (max-width: 991px){
+  header.header-scrolled {
+    background: rgba(0,0,0,.88) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  }
+}
+
+/* Micro-interacción press en mobile: cards y botones */
+@media (hover: none) and (pointer: coarse){
+  .menu .content .box:active,
+  .btn:active {
+    transform: scale(0.98);
+    transition: transform .08s ease;
+  }
+}
+
+/* Accesibilidad: sin animaciones si el usuario lo pide */
+@media (prefers-reduced-motion: reduce){
+  .reveal { transition: none !important; transform: none !important; opacity: 1 !important; }
+  .menu .content .box:active,
+  .btn:active { transform: none !important; }
+}
+
 
 
 
