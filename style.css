@@ -432,5 +432,22 @@ copyrightText {
   color: #ccc !important;        /* Gris suave, más delicado */
   margin-top: 3px !important;
 }
+/* Hamburguesa y cerrar en SVG blanco embebido */
+.menuToggle{
+  width:40px !important; height:40px !important; cursor:pointer !important;
+  background: center/26px no-repeat !important;
+  z-index:10002 !important;
+  /* tres rayas blancas */
+  background-image: url("data:image/svg+xml;utf8,<svg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><g stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round'><line x1='10' y1='14' x2='38' y2='14'/><line x1='10' y1='24' x2='38' y2='24'/><line x1='10' y1='34' x2='38' y2='34'/></g></svg>") !important;
+}
+.menuToggle.active{
+  /* ícono de cerrar en blanco */
+  background: center/24px no-repeat !important;
+  background-image: url("data:image/svg+xml;utf8,<svg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><g stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round'><line x1='12' y1='12' x2='36' y2='36'/><line x1='36' y1='12' x2='12' y2='36'/></g></svg>") !important;
+}
+
+/* Asegura que ningún filtro lo oscurezca */
+header.sticky .menuToggle{ filter:none !important; }
+
 
 
