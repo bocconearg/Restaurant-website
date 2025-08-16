@@ -410,3 +410,81 @@ nav ul li + li { border-top: 1px solid rgba(0,0,0,.06); padding-top: 14px; }
   .menuToggle.active{ background:url(img/close.png) center/25px no-repeat; }
 }
 
+/* ===== MENÚ ITALIANO con textura + franja tricolor ===== */
+@media (max-width: 991px){
+  /* capa base del overlay */
+  header .navigation{
+    position: fixed; inset: 0;
+    padding: 90px 28px 40px;
+    display: flex; flex-direction: column; gap: 26px;
+    transform: translateX(100%); transition: transform .3s ease;
+    z-index: 10001;
+    /* quitamos color plano; usamos transparencia para ver las pseudo-capaz */
+    background: transparent;
+    backdrop-filter: blur(8px);          /* vidrio esmerilado */
+  }
+  header .navigation.active{ transform: translateX(0); }
+
+  /* --- textura papel + viñeta suave --- */
+  header .navigation::before{
+    content:"";
+    position: absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.0) 30%, rgba(0,0,0,.06) 100%),
+      url('img/texture-paper.jpg');           /* <-- subí una textura sutil (papel/mármol) */
+    background-size: cover;
+    background-position: center;
+    opacity:.92;
+    z-index:-2;
+  }
+
+  /* --- franja tricolor Italia al costado izquierdo --- */
+  header .navigation::after{
+    content:"";
+    position: absolute; left:0; top:0; bottom:0; width:8px;
+    background: linear-gradient(#009246 0 33.33%, #ffffff 33.33% 66.66%, #ce2b37 66.66% 100%);
+    box-shadow: 0 0 16px rgba(0,0,0,.08) inset;
+    z-index:-1;
+  }
+
+  /* items */
+  header .navigation li{ list-style:none; margin:0; padding-left:6px; }
+  header .navigation li + li{ border-top:1px solid rgba(0,0,0,.06); padding-top:16px; }
+
+  /* tipografía y subrayado elegante */
+  header .navigation li a{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size: clamp(22px, 5.6vw, 30px);
+    letter-spacing:.3px;
+    color:#1B1B1B;
+    text-decoration:none;
+    position: relative;
+    padding-left: 34px;                 /* espacio para el ícono */
+  }
+  /* subrayado animado */
+  header .navigation li a::after{
+    content:"";
+    position:absolute; left:34px; right:0; bottom:-6px; height:2px;
+    background: linear-gradient(90deg, #009246, #ffffff, #ce2b37);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .25s ease;
+  }
+  header .navigation li a:hover::after{ transform: scaleX(1); }
+
+  /* emojis por item (sin tocar HTML) */
+  header .navigation li:nth-child(1) a::before{ content:"🏠"; position:absolute; left:0; }
+  header .navigation li:nth-child(2) a::before{ content:"🍅"; position:absolute; left:0; }
+  header .navigation li:nth-child(3) a::before{ content:"🍕"; position:absolute; left:0; }
+  header .navigation li:nth-child(4) a::before{ content:"📍"; position:absolute; left:0; }
+
+  /* botón hamburguesa/close fijo */
+  .menuToggle{
+    position: fixed; top:18px; right:18px;
+    width:40px; height:40px; z-index:10002; cursor:pointer;
+    background:url(img/menu.png) center/30px no-repeat;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
+  }
+  .menuToggle.active{ background:url(img/close.png) center/25px no-repeat; }
+}
+
