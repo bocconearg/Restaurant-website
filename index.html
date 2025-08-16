@@ -5,180 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Boccone Pizzería</title>
 
-  <!-- Google Fonts -->
+  <!-- Fuentes y CSS principal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Header -->
-  <header class="site-header">
-    <a href="#" class="logo">
-      <img src="img/logo_boccone_alta_calidad.png" alt="Boccone" /> <!-- ajustar ruta -->
+  <header>
+    <a href="#banner" class="logo">
+      <img src="logo_boccone_alta_calidad.png" alt="Boccone Pizzería">
     </a>
-
-    <button class="menuToggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('nav-open')">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="main-nav">
-      <a href="#sobre-nosotros">Nosotros</a>
-      <a href="#menu">Menú</a>
-      <a href="#contacto">Contacto</a>
-      <a class="btn btn-primary" href="#menu">Ver Pizzas</a>
-    </nav>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
+    <ul class="navigation">
+      <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
   </header>
 
   <!-- Hero -->
-  <section class="hero" style="--hero:url('img/hero_pizza.jpg')"><!-- ajustar ruta -->
-    <div class="hero-inner">
-      <h1 class="display">La Vera Pizza Napoletana</h1>
-      <a class="btn btn-primary" href="#menu">Ver Pizzas</a>
+  <section class="banner" id="banner">
+    <div class="content">
+      <h2>Napolitana Auténtica</h2>
+      <a href="#menu" class="btn">Nuestro Menú</a>
     </div>
   </section>
 
-  <!-- Sobre Nosotros -->
-  <section id="sobre-nosotros" class="section section-cream">
-    <div class="flag-divider" aria-hidden="true">
-      <span class="flag flag-green"></span><span class="flag flag-white"></span><span class="flag flag-red"></span>
-    </div>
-
-    <div class="container">
-      <h2 class="section-title"><span class="dropcap">S</span>obre Nosotros</h2>
-      <p class="lead">
-        En Boccone llevamos la tradición italiana a cada pizza. Utilizamos siempre ingredientes de altísima calidad, seleccionados con cuidado, y elaboramos cada receta con pasión y dedicación. Creemos que el verdadero secreto está en el cariño que ponemos en cada paso, desde la masa hasta el último detalle antes de servirla. Porque más que pizzas, creamos momentos para compartir.
-      </p>
-
-      <figure class="photo-wide">
-        <img src="img/nosotros_pizza.jpg" alt="Preparación artesanal de la pizza" /> <!-- ajustar ruta -->
-      </figure>
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="row">
+      <div class="col50">
+        <h2 class="titleText"><span>S</span>obre Nosotros</h2>
+        <p>
+          En Boccone llevamos la tradición italiana a cada pizza. Utilizamos siempre ingredientes de altísima calidad, seleccionados con cuidado, y elaboramos cada receta con pasión y dedicación. Creemos que el verdadero secreto está en el cariño que ponemos en cada paso, desde la masa hasta el último detalle antes de servirla. Porque más que pizzas, creamos momentos para compartir.
+        </p>
+      </div>
+      <div class="col50">
+        <div class="imgBx">
+          <img src="IMG-20250813-WA0007.jpg" alt="Sobre Boccone">
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Línea tricolor italiana -->
+  <div class="italian-divider">
+    <div class="green"></div>
+    <div class="white"></div>
+    <div class="red"></div>
+  </div>
 
   <!-- Menú -->
-  <section id="menu" class="section">
-    <div class="flag-divider" aria-hidden="true">
-      <span class="flag flag-green"></span><span class="flag flag-white"></span><span class="flag flag-red"></span>
+  <section class="menu" id="menu">
+    <div class="title">
+      <h2 class="titleText"><span>M</span>enú</h2>
+      <p>Descubrí nuestras pizzas estilo napolitano, hechas con masa de fermentación lenta.</p>
     </div>
 
-    <div class="container">
-      <h2 class="section-title"><span class="dropcap">M</span>enú</h2>
-      <p class="section-sublead">Descubrí nuestras pizzas estilo napolitano, hechas con masa de fermentación lenta.</p>
-
-      <div class="grid-cards">
-        <!-- Card -->
-        <article class="card">
-          <img src="img/menu/margherita.jpg" alt="Pizza Margherita" /> <!-- ajustar ruta -->
-          <div class="card-body">
-            <h3 class="menu-title">Margherita</h3>
-            <p class="menu-subtitle">La clásica de Nápoles</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/menu/diavola.jpg" alt="Pizza Diavola" />
-          <div class="card-body">
-            <h3 class="menu-title">Diavola</h3>
-            <p class="menu-subtitle">Un toque piccante</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/menu/quattro-formaggi.jpg" alt="Pizza Quattro Formaggi" />
-          <div class="card-body">
-            <h3 class="menu-title">Quattro Formaggi</h3>
-            <p class="menu-subtitle">Intensa y cremosa</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/menu/prosciutto-funghi.jpg" alt="Pizza Prosciutto e Funghi" />
-          <div class="card-body">
-            <h3 class="menu-title">Prosciutto e Funghi</h3>
-            <p class="menu-subtitle">Clásico italiano</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/menu/capricciosa.jpg" alt="Pizza Capricciosa" />
-          <div class="card-body">
-            <h3 class="menu-title">Capricciosa</h3>
-            <p class="menu-subtitle">Sabores en equilibrio</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="img/menu/bufalina.jpg" alt="Pizza Bufalina" />
-          <div class="card-body">
-            <h3 class="menu-title">Bufalina</h3>
-            <p class="menu-subtitle">Frescura de búfala</p>
-          </div>
-        </article>
-
-        <!-- Agregá más cards si querés -->
+    <div class="content">
+      <div class="box">
+        <div class="imgBx"><img src="IMG-20250813-WA0003.jpg" alt="Pizza Margarita"></div>
+        <div class="text"><h3>Margarita</h3></div>
       </div>
 
-      <div class="cta-center">
-        <a class="btn btn-primary" href="#contacto">Hacer Pedido</a>
+      <div class="box">
+        <div class="imgBx"><img src="img/Roquefort.png" alt="Pizza Roquefort"></div>
+        <div class="text"><h3>Roquefort</h3></div>
+      </div>
+
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Prosciutto"></div>
+        <div class="text"><h3>Prosciutto</h3></div>
+      </div>
+
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Mozzarella"></div>
+        <div class="text"><h3>Mozzarella</h3></div>
+      </div>
+
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Marinara"></div>
+        <div class="text"><h3>Marinara</h3></div>
+      </div>
+
+      <div class="box">
+        <div class="imgBx"><img data-random alt="Pizza Peperoni"></div>
+        <div class="text"><h3>Peperoni</h3></div>
       </div>
     </div>
+
+    <div class="title"><a href="#" class="btn">Ver Todo</a></div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="section section-cream">
-    <div class="container">
-      <h2 class="section-title"><span class="dropcap">C</span>ontacto</h2>
+  <section class="contact" id="contact" aria-label="Sección de contacto">
+    <div class="contact-card">
+      <!-- centrado sin tocar tu CSS -->
+      <header class="contact-head" style="text-align:center;margin-bottom:18px;">
+        <h2 class="titleText" style="display:inline-block;line-height:1.15;"><span>C</span>ontacto</h2>
+        <p style="margin-top:6px;">Estamos para ayudarte: escribinos o visitanos</p>
+      </header>
 
-      <div class="contact-card">
-        <ul class="contact-list">
-          <li>
-            <span class="icon">💬</span>
-            <a href="https://wa.me/5493755567966" target="_blank" rel="noopener">+54 9 3755 567966</a>
-          </li>
-          <li>
-            <span class="icon">📍</span>
+      <ul class="contact-list">
+        <!-- WhatsApp (SVG outline nítido) -->
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"
+               fill="none" stroke="#25D366" stroke-width="2"
+               vector-effect="non-scaling-stroke" shape-rendering="geometricPrecision"
+               style="width:24px;height:24px;flex:0 0 24px;margin-right:12px;">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M8.5 8.4c.2-.3.5-.6.8-.8.2-.1.5-.1.7 0 .3.2 1.1 1.5 1.3 1.9.2.3.2.6 0 .9-.2.3-.6.7-.7.9-.1.2 0 .4.1.6.4.7 1.4 1.8 2.2 2.3.2.1.4.2.6.1.2-.1.6-.5.9-.7.3-.2.6-.2.9 0 .4.2 1.6 1 1.8 1.3.1.2.1.5 0 .7-.3.6-1.2 1.3-1.7 1.5-.3.1-.7.1-1 .1-1.1 0-2.3-.5-3.5-1.4a8 8 0 0 1-2.6-2.6c-.6-1-.9-2-.9-2.9 0-.3 0-.6.2-.9Z"/>
+          </svg>
+          <a href="https://wa.me/5493755567966" target="_blank" rel="noopener">+54 9 3755 567966</a>
+        </li>
+
+        <!-- Dirección -->
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"
+               fill="none" stroke="#d32f2f" stroke-width="2"
+               vector-effect="non-scaling-stroke" shape-rendering="geometricPrecision"
+               style="width:24px;height:24px;flex:0 0 24px;margin-right:12px;">
+            <path d="M12 22s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <a href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">
             San Luis 234, Oberá, Misiones
-          </li>
-          <li>
-            <span class="icon">🕰</span>
-            Mar a Sáb: 19:30–23:00 • Dom: 19:30–23:30
-          </li>
-          <li>
-            <span class="icon">📸</span>
-            <a href="https://instagram.com/boccone.arg" target="_blank" rel="noopener">@boccone.arg</a>
-          </li>
-        </ul>
+          </a>
+        </li>
 
-        <!-- Mapa pequeño embebido (opcional) -->
-        <div class="map-embed">
-          <iframe
-            title="Mapa Boccone"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=San%20Luis%20234%20Ober%C3%A1%20Misiones&output=embed">
-          </iframe>
-        </div>
+        <!-- Instagram -->
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"
+               fill="none" stroke="#E1306C" stroke-width="2"
+               vector-effect="non-scaling-stroke" shape-rendering="geometricPrecision"
+               style="width:24px;height:24px;flex:0 0 24px;margin-right:12px;">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="3.5"/>
+            <circle cx="17.5" cy="6.5" r="1.2"/>
+          </svg>
+          <a href="https://instagram.com/boccone.arg" target="_blank" rel="noopener">@boccone.arg</a>
+        </li>
 
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://wa.me/5493755567966" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-outline" href="https://maps.google.com/?q=San+Luis+234+Oberá+Misiones" target="_blank" rel="noopener">Cómo llegar</a>
-        </div>
+        <!-- Horario -->
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"
+               fill="none" stroke="#555" stroke-width="2"
+               vector-effect="non-scaling-stroke" shape-rendering="geometricPrecision"
+               style="width:24px;height:24px;flex:0 0 24px;margin-right:12px;">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l4 2"/>
+          </svg>
+          <span>Mar a Sáb: 19:30–23:00 • Dom: 19:30–23:30</span>
+        </li>
+      </ul>
+
+      <div class="contact-actions" style="gap:12px;">
+        <a class="btn" href="https://wa.me/5493755567966" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-light" href="https://maps.google.com/?q=San+Luis+234,+Ober%C3%A1,+Misiones" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Boccone. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <!-- Footer -->
+  <div class="copyrightText">
+    <p>© 2025 Boccone. Todos los derechos reservados.</p>
+  </div>
 
+  <!-- Scripts -->
   <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Header sticky
+    window.addEventListener('scroll', function(){
+      const header = document.querySelector('header');
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    // Toggle menú mobile
+    function toggleMenu(){
+      const menuToggle = document.querySelector('.menuToggle');
+      const navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+
+    // Imágenes aleatorias del menú
+    const WA_IMAGES = [
+      './img/IMG-20250813-WA0001.jpg',
+      './img/IMG-20250813-WA0002.jpg',
+      './img/IMG-20250813-WA0003.jpg',
+      './img/IMG-20250813-WA0004.jpg',
+      './img/IMG-20250813-WA0005.jpg',
+      './img/IMG-20250813-WA0006.jpg',
+      './img/IMG-20250813-WA0007.jpg',
+      './img/IMG-20250813-WA0008.jpg'
+    ];
+    function shuffle(array){
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    function assignRandomImages(){
+      let pool = shuffle(WA_IMAGES.slice());
+      document.querySelectorAll('img[data-random]').forEach(img => {
+        if (pool.length === 0) pool = shuffle(WA_IMAGES.slice());
+        img.src = pool.pop();
+        img.loading = 'lazy';
+      });
+    }
+    assignRandomImages();
   </script>
 </body>
 </html>
