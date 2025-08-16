@@ -16,62 +16,6 @@
   <!-- CSS (forzamos recarga con ?v=11) -->
   <link rel="stylesheet" href="style.css?v=11">
 </head>
-  <script>
-/* Parallax on scroll – suave y eficiente */
-(function(){
-  const imgs = document.querySelectorAll('.menu .content .box .imgBx img');
-  if (!imgs.length) return;
-
-  // Velocidad por imagen (podés variar si querés, ej. dataset speed)
-  const SPEED = 0.12; // cuanto mayor, más se mueve (0.08–0.18 recomendado)
-
-  let ticking = false;
-
-  // Usamos IntersectionObserver para activar solo cuando se ven
-  const active = new Set();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) active.add(e.target);
-      else active.delete(e.target);
-    });
-  }, { root: null, rootMargin: '100px 0px', threshold: 0 });
-
-  imgs.forEach(img => io.observe(img));
-
-  function update(){
-    active.forEach(img => {
-      const rect = img.getBoundingClientRect();
-      const vh = window.innerHeight || document.documentElement.clientHeight;
-
-      // Progreso del card en viewport (-1 arriba, 0 centro, +1 abajo aprox.)
-      const center = rect.top + rect.height/2;
-      const progress = (center - vh/2) / vh; // -0.5 a 0.5 aprox.
-
-      // Shift en px (ajustá 18–28 si querés más/menos movimiento)
-      const shift = Math.max(-28, Math.min(28, progress * SPEED * vh));
-      img.style.setProperty('--shift', shift.toFixed(2) + 'px');
-    });
-    ticking = false;
-  }
-
-  function onScroll(){
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(update);
-    }
-  }
-
-  // Desactivar si el usuario prefiere menos movimiento
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (prefersReduced.matches) return;
-
-  // Primer cálculo y listeners
-  update();
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-})();
-</script>
-
 <body>
   <!-- Header -->
   <header>
@@ -285,5 +229,61 @@
     }
     assignRandomImages();
   </script>
+  <script>
+/* Parallax on scroll – suave y eficiente */
+(function(){
+  const imgs = document.querySelectorAll('.menu .content .box .imgBx img');
+  if (!imgs.length) return;
+
+  // Velocidad por imagen (podés variar si querés, ej. dataset speed)
+  const SPEED = 0.12; // cuanto mayor, más se mueve (0.08–0.18 recomendado)
+
+  let ticking = false;
+
+  // Usamos IntersectionObserver para activar solo cuando se ven
+  const active = new Set();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) active.add(e.target);
+      else active.delete(e.target);
+    });
+  }, { root: null, rootMargin: '100px 0px', threshold: 0 });
+
+  imgs.forEach(img => io.observe(img));
+
+  function update(){
+    active.forEach(img => {
+      const rect = img.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+
+      // Progreso del card en viewport (-1 arriba, 0 centro, +1 abajo aprox.)
+      const center = rect.top + rect.height/2;
+      const progress = (center - vh/2) / vh; // -0.5 a 0.5 aprox.
+
+      // Shift en px (ajustá 18–28 si querés más/menos movimiento)
+      const shift = Math.max(-28, Math.min(28, progress * SPEED * vh));
+      img.style.setProperty('--shift', shift.toFixed(2) + 'px');
+    });
+    ticking = false;
+  }
+
+  function onScroll(){
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  // Desactivar si el usuario prefiere menos movimiento
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (prefersReduced.matches) return;
+
+  // Primer cálculo y listeners
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+})();
+</script>
+
 </body>
 </html>
